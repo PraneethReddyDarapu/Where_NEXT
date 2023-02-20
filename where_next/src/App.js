@@ -13,6 +13,7 @@ import Services from './pages/Service/Services';
 import Hangout_Together from './pages/Hangout_Together/Hangout_Together';
 import Navbar from './Components/Navbar/Navbar';
 
+
 function App () {
   return (
    <Router>
