@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from 'react-router-dom';
 
-function App() {
+import Destination from './pages/Destination/Destination';
+import Travel_Theme from './pages/TravelTheme/TravelTheme';
+import Home from './pages/Home/Home';
+import Services from './pages/Service/Services';
+import Hangout_Together from './pages/Hangout_Together/Hangout_Together';
+import Navbar from './Components/Navbar/Navbar';
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+    <Navbar/>
+       <Routes>
+        <Route path="/" exact element={<Home/>}/>
+        <Route path="/hangout" exact element={<Hangout_Together/>}/>
+        <Route path="/travel" exact element={<Travel_Theme/>}/>
+        <Route path="/destination" exact element={<Destination/>}/>
+         <Route path="/service" exact element={<Services/>}/>    
+      </Routes>
+   </Router>
   );
 }
-
 export default App;
