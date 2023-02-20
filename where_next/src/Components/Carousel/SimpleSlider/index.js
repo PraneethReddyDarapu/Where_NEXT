@@ -105,7 +105,44 @@ function SimpleSlider() {
   }
   
   const products = [
-   
+    {
+      id: 1,
+      image: "../images/Mountains.jpg",
+      name:"Mountains",
+      description: "Description"
+    },
+    {
+      id: 2,
+      image: "../images/Hill Stations.jpg",
+      name:"Hill Stations",
+      description:"Description"
+    },
+    {
+      id: 3,
+      image: "../images/Desert.jpg",
+      name:"Deserts",
+      description:"Description"
+    },
+    {
+      id: 4,
+      image: "../images/Adventure.jpg",
+      name:"Adventure",
+      description:"Description"
+    },
+  
+    {
+      id: 5,
+      image: "../images/Heritage.jpg",
+      name:"Heritage",
+      description:"Description"
+    },
+    {
+      id: 6,
+      image: "../images/Beaches.jpg",
+      name:"Beaches",
+      description:"Description"
+    },
   ];
+
 
   export default SimpleSlider;
