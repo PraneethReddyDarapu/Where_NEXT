@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';  
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +16,7 @@ import Navbar from './Components/Navbar/Navbar';
 
 function App () {
   return (
+    
    <Router>
     <Navbar/>
        <Routes>
@@ -25,6 +27,7 @@ function App () {
          <Route path="/service" exact element={<Services/>}/>    
       </Routes>
    </Router>
+   
   );
 }
 export default App;
