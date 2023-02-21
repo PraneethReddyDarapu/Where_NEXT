@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';  
 import {
   BrowserRouter as Router,
   Route,
@@ -17,6 +18,7 @@ import Navbar from './Components/Navbar/Navbar';
 
 function App () {
   return (
+    
    <Router>
     <Navbar/>
        <Routes>
@@ -30,6 +32,7 @@ function App () {
       </Routes>
       <Footer/>
    </Router>
+   
   );
 }
 export default App;
