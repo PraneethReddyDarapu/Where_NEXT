@@ -1,10 +1,12 @@
 .footer-container {
     background-color: #242424;
-    padding: 4rem 0 2rem 0;
+    /* padding: 4rem 0 2rem 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
+    height: 100%;
   }
   
   .footer-subscription {
@@ -15,7 +17,7 @@
     text-align: center;
   
     margin-bottom: 24px;
-    padding: 24px;
+     padding: 24px; 
     color: #fff;
   }
   
@@ -25,7 +27,7 @@
   }
   
   .footer-subscription-heading {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     font-size: 24px;
   }
   
@@ -41,7 +43,7 @@
     outline: none;
     border: none;
     font-size: 18px;
-    margin-bottom: 16px;
+   /*  margin-bottom: 16px; */
     border: 1px solid #fff;
   }
   
