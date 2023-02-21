@@ -5,7 +5,7 @@ import $ from "jquery";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
+
 
 function Navbar () {
 
@@ -95,10 +95,10 @@ function Navbar () {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/service" exact>
+              <NavLink className="nav-link" to="/blog" exact>
                 <i 
                 className="far fa-clone">
-                </i>Services
+                </i>Blogs
               </NavLink>
             </li>
             <li className="nav-item">
@@ -106,6 +106,13 @@ function Navbar () {
                 <i 
                 className="far fa-chart-bar">
                 </i>Hangout Together
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/tripsearch" exact>
+                <i 
+                className="far fa-chart-bar">
+                </i>Trip Search
               </NavLink>
             </li>
         </ul>

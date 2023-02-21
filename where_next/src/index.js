@@ -5,7 +5,6 @@ import Destination from './pages/Destination/Destination';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
