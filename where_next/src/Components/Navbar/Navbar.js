@@ -5,6 +5,7 @@ import $ from "jquery";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 function Navbar () {
@@ -65,7 +66,7 @@ function Navbar () {
  
       <div 
         className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-5">
             
             <div className="hori-selector">
               <div className="left"></div>
@@ -81,9 +82,10 @@ function Navbar () {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/destination" exact>
-                <i 
+                 <i 
                 className="far fa-address-book">
-                </i>Destination
+                  </i> Destination
+                
               </NavLink> 
             </li>
             <li className="nav-item">

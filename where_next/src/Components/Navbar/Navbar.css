@@ -19,10 +19,9 @@ i {
 
 .navbar-mainbg {
   background-color: black;
-  padding: 0px;
 }
 #navbarSupportedContent {
-  overflow: hidden;
+  overflow:visible;
   position: relative;
 }
 #navbarSupportedContent ul {
@@ -41,10 +40,10 @@ i {
   text-decoration: none;
   font-size: 15px;
   display: block;
-  padding: 20px 20px;
+  padding: 10px 10px;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  position: relative;
+  position:relative;
 }
 #navbarSupportedContent > ul > li.active > a {
   color: #000000;
@@ -60,7 +59,7 @@ i {
   font-family: 'Font Awesome 5 Free';
   display: inline-block;
   padding-right: 3px;
-  vertical-align: middle;
+  vertical-align:middle;
   font-weight: 900;
   transition: 0.5s;
 }
@@ -71,7 +70,7 @@ i {
 .hori-selector {
   display: inline-block;
   position: absolute;
-  height: 100%;
+  height:auto;
   top: 0px;
   bottom: 0px;
   transition-duration: 0.6s;
@@ -82,7 +81,7 @@ i {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
  /*  margin-top: 10px;   */
-  margin-bottom: 80%;
+  margin-bottom: 30%;
    }
 /* .hori-selector .right,
 .hori-selector .left {
