@@ -81,11 +81,6 @@ function Navbar () {
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="/destination" exact>
-                <i 
-                className="far fa-address-book">
-                </i>Destination
-              </NavLink> 
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/travel" exact>
