@@ -7,7 +7,7 @@ const Trip_Search = () => {
     <div className="container">
     
         <h1 className="text-center" style={{paddingTop: "30%"}}>
-          Services
+          Trip Search
         </h1>
         
     </div>
