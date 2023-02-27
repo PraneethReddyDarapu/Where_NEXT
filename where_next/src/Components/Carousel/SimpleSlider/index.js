@@ -3,6 +3,7 @@ import {  Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import "./card.css"
 import { Card } from 'react-bootstrap';
 
 function SampleNextArrow(props) {
@@ -44,10 +45,10 @@ const settings = {
   
 };
   return (
-    <div>
+    <div className="card-title">
       <br />
       <br />
-      <h2 style={{textAlign: "center"}}>Popular Travel Themes</h2>
+      <h2 style={{textAlign: "center"}}>Immersive Travel Themes</h2>
       <br />
     
     <Slider {...settings}>

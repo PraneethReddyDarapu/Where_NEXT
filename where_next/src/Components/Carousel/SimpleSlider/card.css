@@ -1,8 +1,10 @@
-.card {
-    background-color: #f0f0f0;
-    padding: 20px;
-    height: 250px;
-    overflow: hidden;
+.card-title {
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.72;
+    letter-spacing: normal;
+    font-family: 'Montserrat',sans-serif;
   }
   
   .card h2 {

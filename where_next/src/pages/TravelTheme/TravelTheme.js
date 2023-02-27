@@ -11,7 +11,7 @@ export default Travel_Theme;
 export const data = [
   {
     id: 1,
-    image: "../images/TravelTheme1.jpg",
+    image: "../images/wildlife-1.jpg",
     title:"Nature and Wildlife",
     description: "Into the best view of wilderness"
   },
