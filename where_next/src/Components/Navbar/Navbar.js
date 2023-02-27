@@ -5,7 +5,8 @@ import $ from "jquery";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 function Navbar () {
 
@@ -65,7 +66,7 @@ function Navbar () {
  
       <div 
         className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-5">
             
             <div className="hori-selector">
               <div className="left"></div>
@@ -79,13 +80,15 @@ function Navbar () {
                 </i>Home
               </NavLink>
             </li>
-
             <li className="nav-item">
               <NavLink className="nav-link" to="/destination" exact>
-                <i 
+                 <i 
                 className="far fa-address-book">
-                </i>Destination
+                  </i> Destination
+                
               </NavLink> 
+            </li>
+            <li className="nav-item">
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/travel" exact>
@@ -95,10 +98,10 @@ function Navbar () {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/service" exact>
+              <NavLink className="nav-link" to="/blog" exact>
                 <i 
                 className="far fa-clone">
-                </i>Services
+                </i>Blogs
               </NavLink>
             </li>
             <li className="nav-item">
@@ -106,6 +109,13 @@ function Navbar () {
                 <i 
                 className="far fa-chart-bar">
                 </i>Hangout Together
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/tripsearch" exact>
+                <i 
+                className="far fa-chart-bar">
+                </i>Trip Search
               </NavLink>
             </li>
         </ul>
