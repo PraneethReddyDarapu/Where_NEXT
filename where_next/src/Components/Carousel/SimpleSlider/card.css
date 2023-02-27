@@ -1,0 +1,20 @@
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin-bottom: 0;
+  }
+  
+  .card a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }

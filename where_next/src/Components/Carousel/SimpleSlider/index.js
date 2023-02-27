@@ -39,26 +39,35 @@ const settings = {
   autoplaySpeed: 2000,
   pauseOnHover: true,
   centerMode: true,
-  centerPadding: "60px",
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
+  
 };
   return (
+    <div>
+      <br />
+      <br />
+      <h2 style={{textAlign: "center"}}>Popular Travel Themes</h2>
+      <br />
+    
     <Slider {...settings}>
       {data.map((item) => (        
         <div key={item.id}>
+          <Card bg='black' text='white'>
           <Link to={`/travel/${item.id}`}>
-          <Card>
             <Card.Img variant="top" src={item.image} />
+            </Link>
             <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
+            <Link to={`/travel/${item.id}`}>
+              <Card.Title style={{textAlign: "center"}}>{item.title}</Card.Title>
+              </Link>
+              <Card.Text style={{textAlign: "center"}}>{item.description}</Card.Text>
             </Card.Body>
           </Card>
-          </Link>
         </div>
       ))}
     </Slider>
+    </div>
   );
 };
 

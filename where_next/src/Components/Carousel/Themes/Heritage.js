@@ -2,9 +2,19 @@ import React from 'react'
 import SimpleSliderInternal from "../SimpleSlider/SimpleSlider_Internal"
 const Heritage = () => {
   return (
-    <div className="container">
-      <SimpleSliderInternal data={data} />
-    </div>)
+    <div>
+    <div className="image">
+      <div className="justimage"><img src="../images/CoveHeritage.jpg" /></div>
+      <div className="centered">Heritage
+    <div><br/><p><h4>Ancient history comes alive here</h4></p></div>
+    </div>
+    </div>
+          <br/>
+          <div className="Heading"><h2 style={{textAlign: "center"}}>Popular Heriatge Destinations</h2></div> 
+        <div className="container">
+          <SimpleSliderInternal data={data} />
+        </div>
+        </div>)
 }
 export default Heritage;
 

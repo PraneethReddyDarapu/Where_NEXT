@@ -2,9 +2,20 @@ import React from 'react'
 import SimpleSliderInternal from "../SimpleSlider/SimpleSlider_Internal"
 const Deserts = () => {
   return (
+    <div>
+<div className="image">
+  <div className="justimage"><img src="../images/CoveDesert.jpg" /></div>
+  <div className="centered">Deserts
+<div><br/><p><h4>Lands of the lost borders</h4></p></div>
+</div>
+</div>
+      <br/>
+      <div className="Heading"><h2 style={{textAlign: "center"}}>Popular Desert Destinations</h2></div> 
     <div className="container">
       <SimpleSliderInternal data={data} />
-    </div>)
+    </div>
+    </div>
+    )
 }
 export default Deserts;
 

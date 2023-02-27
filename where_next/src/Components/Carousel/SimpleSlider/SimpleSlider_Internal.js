@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Card } from 'react-bootstrap';
+import Select from "react-select";
+import {CardItem} from "./CardInternal"
 
 function SampleNextArrow(props) {
   const { className, style, onClick} = props;
@@ -28,7 +30,6 @@ function SamplePrevArrow(props) {
 }
 const SimpleSliderInternal = ({ data }) => { 
 const [countryFilter, setCountryFilter] = useState('');
-
 const handleFilterChange = (event) => {
   setCountryFilter(event.target.value);
 };
@@ -49,29 +50,39 @@ const settings = {
   centerPadding: "60px",
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
   return (
-    <div>
-    <h2>Filter by Country:</h2>
+<div>
+    <div align="right"> <label>Filter by Country : </label> 
     <select onChange={handleFilterChange}>
       <option value="">All</option>
       <option value="USA">USA</option>
       <option value="UK">UK</option>
       <option value="France">France</option>
       <option value="Canada">Canada</option>
+      <option value="India">Canada</option>
+      
     </select>
-    <h2>Carousel:</h2>
+    </div>
     <Slider {...settings}>
       {filteredCards.map((card) => (
         <div key={card.id}>
-          <Card>
-            <Card.Img variant="top" src={card.image} />
-            <Card.Body>
-              <Card.Title>{card.title}</Card.Title>
-              <Card.Text>{card.description}</Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
+            <CardItem title={card.title} description={card.description} image={card.image}/>
+          </div>
       ))}
     </Slider>
     </div>

@@ -12,38 +12,38 @@ export const data = [
   {
     id: 1,
     image: "../images/TravelTheme1.jpg",
-    title:"Mountains",
-    description: "Description"
+    title:"Nature and Wildlife",
+    description: "Into the best view of wilderness"
   },
   {
     id: 2,
     image: "../images/TravelTheme2.jpg",
     title:"Hill Stations",
-    description:"Description"
+    description:"High-altitude towns for recreation"
   },
   {
     id: 3,
     image: "../images/TravelTheme3.jpg",
     title:"Deserts",
-    description:"Description"
+    description:"Lands of the lost borders"
   },
   {
     id: 4,
     image: "../images/TravelTheme4.jpg",
     title:"Adventure",
-    description:"Description"
+    description:"Get an adrenaline rush"
   },
 
   {
     id: 5,
     image: "../images/TravelTheme5.jpg",
     title:"Heritage",
-    description:"Description"
+    description:"Ancient history comes alive here"
   },
   {
     id: 6,
     image: "../images/TravelTheme6.jpg",
     title:"Beaches",
-    description:"Description"
+    description:"High tides & good vibes"
   },
 ];

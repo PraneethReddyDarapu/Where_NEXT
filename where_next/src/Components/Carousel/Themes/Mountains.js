@@ -1,10 +1,23 @@
-import React from 'react'
+import React from 'react';
+import "./Theme.css";
 import SimpleSliderInternal from "../SimpleSlider/SimpleSlider_Internal"
+
 const Mountains = () => {
   return (
+<div>
+<div className="image">
+  <div className="justimage"><img src="../images/CoveNature.jpg" /></div>
+  <div className="centered">Nature and Wildlife
+<div><p><h4>Into the best view of wilderness</h4></p></div>
+</div>
+</div>
+      <br/>
+      <div className="Heading"><h2 style={{textAlign: "center"}}>Popular Nature & Wildlife Destinations</h2></div> 
     <div className="container">
       <SimpleSliderInternal data={data} />
-    </div>)
+    </div>
+    </div>
+    )
 }
 export default Mountains;
 

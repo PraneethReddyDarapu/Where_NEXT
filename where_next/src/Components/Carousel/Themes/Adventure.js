@@ -1,10 +1,20 @@
 import React from 'react'
 import SimpleSliderInternal from "../SimpleSlider/SimpleSlider_Internal"
 const Adventure = () => {
-  return (
-    <div className="container">
-      <SimpleSliderInternal data={data} />
-    </div>)
+  return (<div>
+    <div className="image">
+      <div className="justimage"><img src="../images/CoveAdventure.jpeg" /></div>
+      <div className="centered">Adventure
+    <div><p><h4>Get an adrenaline rush</h4></p></div>
+    </div>
+    </div>
+          <br/>
+          <div className="Heading"><h2 style={{textAlign: "center"}}>Popular Mountain Destinations</h2></div> 
+        <div className="container">
+          <SimpleSliderInternal data={data} />
+        </div>
+        </div>
+        )
 }
 export default Adventure;
 

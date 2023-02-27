@@ -2,9 +2,19 @@ import React from 'react'
 import SimpleSliderInternal from "../SimpleSlider/SimpleSlider_Internal"
 const Beaches = () => {
   return (
-    <div className="container">
-      <SimpleSliderInternal data={data} />
-    </div>)
+    <div>
+    <div className="image">
+      <div className="justimage"><img src="../images/CoveBeach.jpg" /></div>
+      <div className="centered">Beaches
+    <div><br/><p><h4>High tides & good vibes</h4></p></div>
+    </div>
+    </div>
+          <br/>
+          <div className="Heading"><h2 style={{textAlign: "center"}}>Popular Beach Destinations</h2></div> 
+        <div className="container">
+          <SimpleSliderInternal data={data} />
+        </div>
+        </div>)
 }
 export default Beaches;
 
