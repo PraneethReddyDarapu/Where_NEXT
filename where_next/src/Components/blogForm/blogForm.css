@@ -1,0 +1,19 @@
+.blogout{
+    margin: 1%;
+}
+img{
+    max-width: 95%;
+    height: 290px;
+};
+.blogout .card .card-img-top {
+
+    align-items: center;
+
+}
+.blogoutput{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+}
+
+
+  

@@ -41,7 +41,7 @@ function Imageup() {
         <span>
     <h2>You can upload travel pictures here ...</h2>
       <input
-        type="file" class="btn btn-light"
+        type="file" className="btn btn-light"
         onChange={(event) => {
           setImageUpload(event.target.files[0]);
         }}
