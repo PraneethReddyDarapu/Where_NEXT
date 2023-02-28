@@ -118,11 +118,7 @@ function Navbar () {
               </li></ul>
         </ul>
       </div>
-      <div className="search mr-5" style={{color:"white"}}> 
-      <NavLink className="nav-link" to="/search" exact  >Search
-      <BsSearch style={{marginleft:"20px"}} />
-      </NavLink>
-             </div> 
+     
   </nav>
   </Card>
   )

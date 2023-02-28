@@ -1,0 +1,22 @@
+.card-title {
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.72;
+    letter-spacing: normal;
+    font-family: 'Montserrat',sans-serif;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin-bottom: 0;
+  }
+  
+  .card a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
