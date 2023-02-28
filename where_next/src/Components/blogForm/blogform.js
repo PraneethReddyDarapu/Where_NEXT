@@ -119,7 +119,7 @@ function FormBlog() {
         </div>
         <button className="btn btn-dark" onClick={createUser}>
           {" "}
-          Create User
+          Create Blog
         </button>
       </div>
 
@@ -141,7 +141,7 @@ function FormBlog() {
                   </a>
                 </div>
               </div>
-              <button
+              {/* <button
                 className="btn btn-light"
                 onClick={() => {
                   deleteUser(user.id);
@@ -149,7 +149,7 @@ function FormBlog() {
               >
                 {" "}
                 Remove your Blog
-              </button>
+              </button> */}
             </div>
           );
         })}
