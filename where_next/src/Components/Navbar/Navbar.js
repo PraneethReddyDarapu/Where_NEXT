@@ -2,10 +2,9 @@ import React , {useEffect} from 'react'
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import $ from "jquery";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { BsSearch } from "react-icons/bs";
+
 
 
 function Navbar () {
@@ -64,7 +63,7 @@ function Navbar () {
         <i className="fas fa-bars text-white"></i>
       </button>
  
-      <div 
+      <div
         className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-5">
             
@@ -73,15 +72,8 @@ function Navbar () {
               <div className="right"></div>
             </div>
             
-            <li className="nav-item active">
-              <NavLink className="nav-link" to="/" exact>
-                <i 
-                className="fas fa-tachometer-alt">
-                </i>Home
-              </NavLink>
-            </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/destination" exact>
+              <NavLink className="nav-link" to="/" exact>
                  <i 
                 className="far fa-address-book">
                   </i> Destination
@@ -92,9 +84,10 @@ function Navbar () {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/travel" exact>
-                <i 
+                 <i 
                 className="far fa-copy">
-                </i>Travel Theme
+    </i> 
+                Travel Theme
               </NavLink>
             </li>
             <li className="nav-item">
@@ -118,21 +111,14 @@ function Navbar () {
                 </i>Trip Search
               </NavLink>
             </li>
+            <ul><li>
+              <NavLink className="nav-link" to="/search" exact style={{color:'green'}} > 
+              <BsSearch />
+              </NavLink>
+              </li></ul>
         </ul>
       </div>
-      <div className="search"> 
-        <Form className="d-flex">
-         
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          
-          </Form>
-             </div> 
+     
   </nav>
   </Card>
   )

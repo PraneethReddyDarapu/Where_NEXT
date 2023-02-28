@@ -18,6 +18,10 @@ import Deserts from "./Components/Carousel/Themes/Desert";
 import Adventure from "./Components/Carousel/Themes/Adventure";
 import Heritage from "./Components/Carousel/Themes/Heritage";
 import Beaches from "./Components/Carousel/Themes/Beaches";
+import SearchBar from './pages/SearchBar';
+import BG from './pages/Belgium';
+import India from './pages/India';
+import Contact from './Components/Contact/Contact';
 
 import Footer from "./Components/Footer/Footer";
 import SelectedContinent from "./Components/Continents/SelectedContinent";
@@ -29,7 +33,7 @@ function App() {
    <Router>
     <Navbar/>
        <Routes>
-        <Route path="/" exact element={<Home/>}/>
+        <Route path="/" exact element={<Destination/>}/>
          <Route path="/hangout" exact element={<HangoutTogether/>}/>
         <Route path="/travel" exact element={<TravelTheme/>}/>
         <Route path="/travel/1" exact element={<Mountains/>}/>
@@ -42,6 +46,11 @@ function App() {
         <Route path="/blog" exact element={<Blog/>}/> 
         <Route path="/tripsearch" exact element={<TripSearch/>}/> 
         <Route path='destination/:name' element={<SelectedContinent />} />
+        <Route path="/tripsearch" exact element={<TripSearch/>}/>  
+        <Route path="/search" exact element={<SearchBar/>}/> 
+        <Route path="/Belgium" exact element={<BG/>}/>  
+        <Route path="/India" exact element={<India/>}/>  
+        <Route path="/contact" exact element={<Contact/>}/>  
         <Route path='destination/:name/:id' element={<SelectedDestination />} />
         
       </Routes>

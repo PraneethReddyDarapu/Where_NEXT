@@ -44,7 +44,7 @@ export const ContinentDestinations = ({
         continentName={name}
         isContinent={isContinent}
       />
-      {!isContinent ? <Reviews /> : <></>}
+      {!isContinent ? <Reviews /> : <> </>}
     </>
   );
 };
