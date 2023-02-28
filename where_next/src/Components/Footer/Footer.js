@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import Button from 'react-bootstrap/Button';
+import Contact from '../Contact/Contact';
 
 
 import { Link } from 'react-router-dom';
@@ -36,7 +37,7 @@ function Footer() {
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
+            <Link to='/Contact'>Contact</Link>
             <Link to='/'>Support</Link>
             <Link to='/'>Destinations</Link>
           </div>
