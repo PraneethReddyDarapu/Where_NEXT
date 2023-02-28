@@ -11,7 +11,7 @@ import Blog from "./pages/Blog/Blog";
 import HangoutTogether from './pages/Hangout_Together/Hangout_Together';
 import TripSearch from './pages/TripSearch/TripSearch';
 
-import Navbar from './Components/Navbar/Navbar';
+
 import Mountains from "./Components/Carousel/Themes/Mountains";
 import HillStations from "./Components/Carousel/Themes/HillStations";
 import Deserts from "./Components/Carousel/Themes/Desert";
