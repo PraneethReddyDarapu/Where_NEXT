@@ -1,0 +1,66 @@
+.image {
+    position: relative;
+    text-align: center;
+    color: rgb(249, 247, 247);
+    font-size: 2.5em;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-family: 'Montserrat';
+    display: block;
+    
+  }
+  
+  .justimage{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(74, 72, 72, 0.5);
+  transition: all .3s linear
+  
+  }
+  .justimage>img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+    /* Blend with parents background: */
+    mix-blend-mode: multiply;
+  }
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
