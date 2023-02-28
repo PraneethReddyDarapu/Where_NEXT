@@ -1,31 +1,27 @@
-.wdt{    
-    width: 90% !important;    
-}    
-.img    
-{    
-    height: 300px !important;    
-    width: 1000px;    
-}    
-    
-.imgdetails    
-{    
-    height: 565px !important;    
-    width: 1025px !important;    
-    
-}    
-    
-.imgpad    
-{    
-    padding-bottom: 5px !important;    
-    padding-top: 5px !important;    
-  padding-left: 98px !important;    
-  padding-right: 0px !important;    
-    
-}    
-  .cls    
-  {    
-    padding-right: 0px !important;    
-    background-color: blue    
-  }    
+.wdt {
+  width: 90% !important;
+}
 
+.img {
+  height: 300px !important;
+  width: 1000px;
+}
 
+.imgdetails {
+  height: 350px !important;
+  width: 725px !important;
+  margin-left: 4rem;
+}
+
+.imgpad {
+  padding-left: 16rem !important;
+}
+
+.cls {
+  padding-right: 0px !important;
+  background-color: blue
+}
+
+.slickpage {
+  margin-top: 12%;
+}

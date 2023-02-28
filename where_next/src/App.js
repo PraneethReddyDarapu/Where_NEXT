@@ -1,20 +1,17 @@
-import React from 'react';
-import './App.css';  
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from 'react-router-dom';
-import Footer from './Components/Footer/Footer';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Destination from './pages/Destination/Destination';
-import TravelTheme from './pages/TravelTheme/TravelTheme';
-import Home from './pages/Home/Home';
-import Blog from './pages/Blog/Blog';
-import TripSearch from './pages/TripSearch/TripSearch';
+import Navbar from "./Components/Navbar/Navbar";
+
+import Destination from "./pages/Destination/Destination";
+import TravelTheme from "./pages/TravelTheme/TravelTheme";
+import Home from "./pages/Home/Home";
+import Blog from "./pages/Blog/Blog";
 import HangoutTogether from './pages/Hangout_Together/Hangout_Together';
+import TripSearch from './pages/TripSearch/TripSearch';
 
-import Navbar from './Components/Navbar/Navbar';
+
 import Mountains from "./Components/Carousel/Themes/Mountains";
 import HillStations from "./Components/Carousel/Themes/HillStations";
 import Deserts from "./Components/Carousel/Themes/Desert";
@@ -22,8 +19,11 @@ import Adventure from "./Components/Carousel/Themes/Adventure";
 import Heritage from "./Components/Carousel/Themes/Heritage";
 import Beaches from "./Components/Carousel/Themes/Beaches";
 
+import Footer from "./Components/Footer/Footer";
+import SelectedContinent from "./Components/Continents/SelectedContinent";
+import SelectedDestination from "./Components/Continents/SelectedDestination";
 
-function App () {
+function App() {
   return (
     
    <Router>
@@ -41,11 +41,12 @@ function App () {
         <Route path="/destination" exact element={<Destination/>}/>
         <Route path="/blog" exact element={<Blog/>}/> 
         <Route path="/tripsearch" exact element={<TripSearch/>}/> 
+        <Route path='destination/:name' element={<SelectedContinent />} />
+        <Route path='destination/:name/:id' element={<SelectedDestination />} />
         
       </Routes>
-      <Footer/>
-   </Router>
-   
+      <Footer />
+    </Router>
   );
 }
 export default App;

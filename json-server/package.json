@@ -1,0 +1,14 @@
+{
+  "name": "ziperase-server",
+  "version": "1.0.0",
+  "description": "ziperase server side",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch Tours.json --port 3001"
+  },
+  "author": "ziperase",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^0.16.1"
+  }
+}
