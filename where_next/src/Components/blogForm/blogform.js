@@ -90,7 +90,7 @@ function FormBlog() {
         </span>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">
-            Email address
+            Provide your Social media url to promote here
           </label>
           <input
             type="text"
@@ -134,10 +134,10 @@ function FormBlog() {
                   alt="Card image cap"
                 />
                 <div class="card-body">
-                  <h5 class="card-title" href="{user.name}">Social Url</h5>
-                  <p class="card-text">Description: {user.desc}</p>
-                  <a href="#" class="btn btn-primary">
-                    Read more
+                  <a href={user.name} class="btn btn-primary" className="card-title" >{user.name}</a>
+                  <p class="card-text">Description : {user.desc}</p>
+                  <a href={user.name} class="btn btn-primary">
+                    Take me there
                   </a>
                 </div>
               </div>

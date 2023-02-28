@@ -1,7 +1,7 @@
 .blogout{
     margin: 1%;
 }
-img{
+img {
     max-width: 95%;
     height: 290px;
 };
@@ -11,6 +11,7 @@ img{
 
 }
 .blogoutput{
+    margin-top: 5%;
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
 }
