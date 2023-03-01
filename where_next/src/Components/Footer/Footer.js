@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import Button from 'react-bootstrap/Button';
-import Contact from '../Contact/Contact';
 
 
 import { Link } from 'react-router-dom';
@@ -32,14 +31,14 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/aboutus'>How it works</Link>
+            <Link to='/aboutus'>Terms of Service</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/Contact'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
+            <Link to='/contactus'>Contact</Link>
+            <Link to='/contactus'>Support</Link>
+            <Link to='/contactus'>Destinations</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
@@ -51,8 +50,8 @@ function Footer() {
           </div>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
+            <Link to='https://www.instagram.com/'>Instagram</Link>
+            <Link to='https://www.facebook.com/login.php/'>Facebook</Link>
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
           </div>

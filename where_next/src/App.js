@@ -21,8 +21,8 @@ import Beaches from "./Components/Carousel/Themes/Beaches";
 import SearchBar from './pages/SearchBar';
 import BG from './pages/Belgium';
 import India from './pages/India';
-import Contact from './Components/Contact/Contact';
-
+import AboutUs from './Components/AboutUs/aboutus';
+import ContactUs from './Components/ContactUs/contactus'
 import Footer from "./Components/Footer/Footer";
 import SelectedContinent from "./Components/Continents/SelectedContinent";
 import SelectedDestination from "./Components/Continents/SelectedDestination";
@@ -33,7 +33,7 @@ function App() {
    <Router>
     <Navbar/>
        <Routes>
-        <Route path="/" exact element={<Destination/>}/>
+        <Route path="/destination" exact element={<Destination/>}/>
          <Route path="/hangout" exact element={<HangoutTogether/>}/>
         <Route path="/travel" exact element={<TravelTheme/>}/>
         <Route path="/travel/1" exact element={<Mountains/>}/>
@@ -50,7 +50,8 @@ function App() {
         <Route path="/search" exact element={<SearchBar/>}/> 
         <Route path="/Belgium" exact element={<BG/>}/>  
         <Route path="/India" exact element={<India/>}/>  
-        <Route path="/contact" exact element={<Contact/>}/>  
+        <Route path="/aboutus" exact element={<AboutUs/>}/>  
+        <Route path="/contactus" exact element={<ContactUs/>}/>  
         <Route path='destination/:name/:id' element={<SelectedDestination />} />
         
       </Routes>
