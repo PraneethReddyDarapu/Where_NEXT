@@ -6,13 +6,24 @@ function Contact() {
       <Accordion.Item eventKey="0">
         <Accordion.Header>About Us</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+         <p>
+         <h3>
+         Where Next!!!
+         <br/>
+         <p>
+          Want to travel?? 
+          <br>
+          It is now easy with us. 
+          Know about the Destination.
+          Plan with us.
+          Get to know more with our members.
+          Pack your bags.
+          You are done!
+          </br>
+         </p>
+         
+         </h3>
+         </p>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">

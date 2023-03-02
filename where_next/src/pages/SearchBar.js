@@ -58,7 +58,7 @@ export default function SearchBar() {
         </tr>
           {filteredList.map((item, index) => (
             <tr key={index}>
-            <td><img src={item.image} alt=""/></td> 
+            <td><img src={item.image} style={{height:"auto"}} alt=""/></td> 
             <td style={{color:"blue"}}>{item.name}</td>
             <td >{item.contient}
               <Link
