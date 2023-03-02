@@ -33,7 +33,7 @@ function App() {
    <Router>
     <Navbar/>
        <Routes>
-        <Route path="/destination" exact element={<Destination/>}/>
+        <Route path="/" exact element={<Destination/>}/>
          <Route path="/hangout" exact element={<HangoutTogether/>}/>
         <Route path="/travel" exact element={<TravelTheme/>}/>
         <Route path="/travel/1" exact element={<Mountains/>}/>
