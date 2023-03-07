@@ -6,7 +6,7 @@ const HillStations = () => {
 <div className="image">
   <div className="justimage"><img src="../images/CoveHillStation.jpg" /></div>
   <div className="centered">Hill Stations
-<div><br/><p><h4>High-altitude towns for recreation</h4></p></div>
+<br/><h4>High-altitude towns for recreation</h4>
 </div>
 </div>
       <br/>
@@ -76,6 +76,90 @@ const data = [
     title: "Herefordshire",
     description: "Herefordshire is rich in culture and scenic landscapes in England’s West Midlands",
     country: "UK"
-   }
-  ,
+   },
+        {
+            id: 9,
+            image: "../images/Grand Couronne.jpeg",
+            title: "Grand Couronne",
+            description: "It is one of the most underrated France hill stations,if you’re looking for an escape and an experience,this place has got you covered.",
+            country: "France"
+        },
+        {
+            id: 10,
+            image: "../images/Rhône-Alpes.jpeg",
+            title: "Rhône-Alpes",
+            description: "The Rhône-Alpes is a stunning location and one of the best hill stations in France.",
+            country: "France"
+        },
+        {
+            id: 11,
+            image: "../images/Meudon.jpeg",
+            title: "Meudon",
+            description: "It is a rural hamlet in the southwest of Paris,France.Meudon is an excellent area to explore by walking.",
+            country: "France"
+        },
+        {
+            id: 12,
+            image: "../images/Hulluch.jpeg",
+            title: "Hulluch",
+            description: "It is a Pas-de-Calais based commune in the Hauts-de-France region of France.The place is filled with a lot of things to do!",
+            country: "France"
+        },
+        {
+            id: 13,
+            image: "../images/Fernie.jpeg",
+            title: "Fernie,British Columbia",
+            description: "The historic yet quaint small town of Fernie sits comfortable in the arms of the Canadian Rockies and is the ideal place to escape if you want to get away from the usual humdrum of life.",
+            country: "Canada"
+        },
+        {
+            id: 14,
+            image: "../images/Banff.jpeg",
+            title: "Banff,Alberta",
+            description: "One of the highest hill stations in Canada,Banff is an ideal place for a family weekend gateway.It is full of scenic mountain trails that lead you to stunning waterfalls.",
+            country: "Canada"
+        },
+        {
+            id: 15,
+            image: "../images/Laurentiana.jpeg",
+            title: "The Laurentiana,Quebec",
+            description: "The Laurentians alpine region of southern Quebec is a popular Canada hill station for a winter getaway.The region is full of snow-capped mountain peaks.",
+            country: "Canada"
+        },
+        {
+            id: 16,
+            image: "../images/Mont Tremblant.jpeg",
+            title: "Mont Tremblant,Quebec",
+            description: "The picturesque village of Mont Tremblant is one of the most inviting hill stations in Canada.The vibrantly colored buildings against a snowy backdrop give this place a dreamy feel.",
+            country: "Canada"
+        },
+        {
+            id: 17,
+            image: "../images/Nainital.jpeg",
+            title: "Nainital,Uttarakhand",
+            description: "Situated in the Kumaon region of Uttarakhand and home to the spectacular Lake Naini, the famous hill station of India, Nainital, is often referred as the ‘Lake District’ of India.",
+            country: "India"
+        },
+        {
+            id: 18,
+            image: "../images/Munnar.jpeg",
+            title: "Munnar,Kerala",
+            description: "With its well-preserved natural beauty and sprawling tea gardens, Munnar invites honeymoon couples to spend time amidst tranquil and scenic settings. ",
+            country: "India"
+        },
+        {
+            id: 19,
+            image: "../images/Ranikhet.jpeg",
+            title: "Ranikhet,Uttarakhand",
+            description: "Built by the British, Ranikhet is a top hill station of India which you should visit to admire the beauty of topography, flora and fauna of the Himalayas.",
+            country: "India"
+        },
+        {
+            id: 20,
+            image: "../images/Dharmashala.jpeg",
+            title: "Dharamshala,Himachal Pradesh",
+            description: "Along with being one of the best mountain destinations in India for its tranquillity, solitude and center of Tibetan Buddhist culture, Dharamshala in Himachal Pradesh is home to the holy Dalai Lama. ",
+            country: "India"
+        }
+        
 ];
