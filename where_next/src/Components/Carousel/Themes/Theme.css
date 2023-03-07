@@ -5,11 +5,10 @@
     font-size: 2.5em;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
+    line-height: 70px;
     letter-spacing: normal;
     font-family: 'Montserrat';
     display: block;
-    
   }
   
   .justimage{
@@ -21,14 +20,16 @@
   transition: all .3s linear
   
   }
-  .justimage>img {
-    display: block;
+  .justimage img {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  max-width: 100%;
+  height: 700px;
     /* Blend with parents background: */
     mix-blend-mode: multiply;
-  }
+  };
   /* Bottom left text */
   .bottom-left {
     position: absolute;

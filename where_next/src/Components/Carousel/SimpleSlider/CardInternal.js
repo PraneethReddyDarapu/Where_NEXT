@@ -8,7 +8,7 @@ export const CardItem = ({ title, description, image}) => {
   
     return (
       <Card bg='black' text='white' style={{ height: "450px"}}>
-            <Card.Img variant="top" src={image} />
+            <Card.Img className="card-title" src={image} />
         <Card.Body>
           <Card.Title className="card-title" style={{textAlign: "center"}}>{title}</Card.Title>
           {showMore ? (<Card.Text>{description}</Card.Text>) : (
