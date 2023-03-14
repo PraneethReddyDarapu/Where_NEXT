@@ -1,20 +1,20 @@
 .wdt {
-  width: 90% !important;
+  width: 100% !important;
 }
 
 .img {
   height: 300px !important;
-  width: 1000px;
+  width: 1300px;
 }
 
 .imgdetails {
-  height: 350px !important;
-  width: 725px !important;
-  margin-left: 4rem;
+  height: 390px !important;
+  width: 890px !important;
+  margin-left: 3rem;
 }
 
 .imgpad {
-  padding-left: 16rem !important;
+  padding-left: 7.5rem !important;
 }
 
 .cls {
