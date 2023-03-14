@@ -1,14 +1,13 @@
 import React from 'react'
 import App from '../../App';
+import TripSearch from '../../Components/Tripsearch/Tripsearch';
 
 const Trip_Search = () => {
   return (
     
     <div className="container">
     
-        <h1 className="text-center" style={{paddingTop: "30%"}}>
-          Trip Search
-        </h1>
+    <TripSearch></TripSearch>
         
     </div>
   )
