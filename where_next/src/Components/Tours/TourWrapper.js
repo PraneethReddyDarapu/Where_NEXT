@@ -4,7 +4,7 @@ import Tours from "./Tours";
 import { doHttpCall } from "../../util/restapi";
 import "../../Components/Tours/Tours.css";
 
-const toursURL = "http://localhost:3001/tours";
+const toursURL = `${process.env.REACT_APP_API_URL}/tours`;
 
 function TourWrapper() {
   const [loading, setLoading] = useState(true);

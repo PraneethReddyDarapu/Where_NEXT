@@ -15,16 +15,11 @@ export default function SelectedContinent() {
       try {
         const options = {
           method: "GET",
-          url: `http://localhost:3001/continents?name=${name}`,
+          url: `${process.env.REACT_APP_API_URL}/continents/${name}`,
         };
 
         const { data } = await doHttpCall(options);
-
-        if (data[0]) {
-          setContinent(data[0]);
-        } else {
-          setContinent(null);
-        }
+        setContinent(data);
       } catch (error) {
         console.log(error);
       }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Tour = ({ id, image, info, name, price, continentName, removeTour }) => {
-  const navigateTo = `/destination/${continentName ?? "Destination"}/${id}`;
+const Tour = ({ _id, image, info, name, price, continentName, removeTour }) => {
+  const navigateTo = `/destination/${continentName ?? "Destination"}/${_id}`;
   const [readMore, setReadMore] = useState(false);
   return (
     <article className="single-tour">
@@ -22,7 +22,11 @@ const Tour = ({ id, image, info, name, price, continentName, removeTour }) => {
         <Link to={navigateTo} className="details-btn btn-primary">
           details
         </Link>
-        <button className="delete-btn" onClick={() => removeTour(id)}>
+        {/* book */}
+        {/* <Link to={navigateTo} className="details-btn btn btn-secondary">
+          book
+        </Link> */}
+        <button className="delete-btn" onClick={() => removeTour(_id)}>
           not interested
         </button>
       </footer>

@@ -14,18 +14,24 @@ const Tours = ({ tours, removeTour, continentName, isContinent }) => {
           <></>
         )}
       </div>
-      <div className="tours-center">
-        {tours.map((tour) => {
-          return (
-            <Tour
-              key={tour.id}
-              {...tour}
-              continentName={continentName}
-              removeTour={removeTour}
-            />
-          );
-        })}
-      </div>
+      {tours?.length === 0 ? (
+        <div className="title">
+          <h3 className="tours-title"> No Tours Found</h3>
+        </div>
+      ) : (
+        <div className="tours-center">
+          {tours?.map((tour) => {
+            return (
+              <Tour
+                key={tour.id}
+                {...tour}
+                continentName={continentName}
+                removeTour={removeTour}
+              />
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };

@@ -1,125 +1,154 @@
-import { useState, useEffect } from "react";
-import { db } from "../../firebase";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-} from "firebase/firestore";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  listAll,
-  list,
-} from "firebase/storage";
-import { storage } from "./../../../src/firebase";
-import { v4 } from "uuid";
-import { stringLength } from "@firebase/util";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AddHangout from "./AddHangout";
 
 function HangoutTogether() {
-  const [newName, setNewName] = useState("");
-  const [newDesc, setNewDesc] = useState("");
+  const [data, setData] = useState([]);
+  const [chats, setChats] = useState([]);
+  const [user_id, setUser_id] = useState(localStorage.getItem("user_id"));
+  const [activeTab, setActiveTab] = useState(1);
 
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
-
-  const imagesListRef = ref(storage, "images/");
-
-  const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, "users");
-
-  const uploadFile = () => {
-    if (imageUpload == null) return;
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageUrls((prev) => [...prev, url]);
+  const getData = () => {
+    setUser_id(localStorage.getItem("user_id"));
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/hangout`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    });
-  };
-
-  const createUser = async () => {
-    await addDoc(usersCollectionRef, {
-      name: newName,
-      desc: newDesc,
-      image: imageUrls[imageUrls.length - 1],
-    });
-  };
-
-  const deleteUser = async (id) => {
-    const userDoc = doc(db, "users", id);
-    await deleteDoc(userDoc);
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/hangout/personal`)
+      .then((res) => {
+        setChats(res.data);
+      });
   };
 
   useEffect(() => {
-    listAll(imagesListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
-        });
-      });
-    });
-
-    const getUsers = async () => {
-      const data = await getDocs(usersCollectionRef);
-      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-
-    getUsers();
+    getData();
   }, []);
 
   return (
     <div className="Blog">
-            <div className="blogout">
-              <div className="card">
-                <div class="card-body">
-                  <a  class="btn btn-primary" className="card-title" >Traveling to India</a>
-                  <p class="card-text">Description : I am planning to Travel india and my places of interest include Tajmahal , Lotus temple . Intrested people can join me  </p>
-                  <p class="card-text">Planned/Completed Date of travel : 12/18/2023 </p>
-                  <br></br>
-                  <a class="btn btn-primary">
-                    Join group chat
-                  </a>
-                  <a>  </a>
-                  <a class="btn btn-primary">
+      <div className="d-flex justify-content-between">
+        <div className="ps-3">
+          <button
+            className={`btn btn-${
+              activeTab === 1 ? "dark" : "white"
+            } rounded-3 mt-2 me-2`}
+            onClick={() => setActiveTab(1)}
+          >
+            Hangouts
+          </button>
+          <button
+            className={`btn btn-${
+              activeTab === 2 ? "dark" : "white"
+            } rounded-3 mt-2 me-2`}
+            onClick={() => setActiveTab(2)}
+          >
+            Chats
+          </button>
+        </div>
+        <div className="pe-3">
+          <AddHangout getData={getData} />
+        </div>
+      </div>
+      <div className="blogout">
+        {/* hangouts */}
+        {activeTab === 1 &&
+          data.map((row, key) => (
+            <div className="card mt-3 shadow-sm border-0" key={key}>
+              <div class="card-body">
+                <div className="col-2 p-0 m-0">
+                  <div className="d-flex align-items-center m-0 p-0">
+                    <img
+                      src={`https://avatars.dicebear.com/4.5/api/avataaars/${row.user._id}.svg?mood=happy`}
+                      alt="avatar"
+                      className="user__image rounded-circle"
+                    />
+                    <p className="text-dark user__name">
+                      {row.user.first_name} {row.user.last_name}
+                    </p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-10">
+                    <h5>{row.title}</h5>
+                    <p class="card-text">{row.description}</p>
+                    <p class="card-text">
+                      Date of travel : {row?.booking?.start_date || "-"}{" "}
+                    </p>
+                  </div>
+                </div>
+                <br></br>
+                <a
+                  href={`/chat?hangout_id=${row._id}&type=group`}
+                  class="btn btn-dark text-decoration-none"
+                >
+                  Join group chat
+                </a>
+                {row.user_id != user_id && (
+                  <a
+                    href={`/chat?hangout_id=${row._id}&user_id=${row.user._id}&type=personal`}
+                    class="btn btn-primary ms-3 text-decoration-none"
+                  >
                     chat personally
                   </a>
-                </div>
+                )}
               </div>
-              <br></br>
-              <div className="card">
-                <div class="card-body">
-                  <a  class="btn btn-primary" className="card-title" >Traveled to Montana Mountain trecking</a>
-                  <p class="card-text">Description : I have visited Montana, best time to visit is around 7am in the morning, carry Extra waterbottles, any queries can contact me on chat </p>
-                  <p class="card-text">Planned/Completed Date of travel : 12/18/2020</p>
-                  <br></br>
-                  <a class="btn btn-primary">
-                    Join group chat
-                  </a>
-                  <a>  </a>
-                  <a class="btn btn-primary">
-                    chat personally
-                  </a>
-
-                </div>
-                
-              </div>
-              
-              {/* <button
-                className="btn btn-light"
+            </div>
+          ))}
+        {/* chat */}
+        {activeTab === 2 &&
+          chats.map((row, key) => (
+            <div className="card mt-3 shadow-sm border-0 pb-3">
+              <div
+                className="d-flex"
+                // use div as a link
+                role={"button"}
                 onClick={() => {
-                  deleteUser(user.id);
+                  window.location.href = `/chat?user_id=${row.targetUserIds}&type=personal`;
                 }}
               >
-                {" "}
-                Remove your Blog
-              </button> */}
+                <div className="col-12">
+                  <div className="d-flex align-items-center">
+                    <img
+                      src={`https://avatars.dicebear.com/4.5/api/avataaars/${row.user._id}.svg?mood[]=happy`}
+                      alt="avatar"
+                      className="user__image rounded-circle"
+                    />
+                    <h5 className="text-dark fw-light">
+                      {row.user.first_name} {row.user.last_name}
+                    </h5>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <p>{row.lastMessage[0]?.message}</p>
+                    {/* <p>{row.lastMessage[0]?.created_at}</p> */}
+                    <p>
+                      {new Date(row.lastMessage[0]?.created_at).toLocaleString(
+                        "en-US",
+                        {
+                          hour: "numeric",
+                          minute: "numeric",
+                          hour12: true,
+                        }
+                      )}
+                    </p>
+                  </div>
+                </div>
+                {/* <a
+                  className="col-4 d-flex align-items-center text-decoration-none"
+                  href={`/chat?user_id=${row._id}&type=personal`}
+                >
+                  <button className="btn btn-dark ms-3 text-decoration-none">
+                    Send Message
+                  </button>
+                </a> */}
+              </div>
             </div>
-
-     
+          ))}
+      </div>
     </div>
   );
 }

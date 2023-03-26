@@ -11,8 +11,8 @@ export default function SelectedDestination() {
 
   const navigateUrl =
     name !== "Destination"
-      ? `http://localhost:3001/continents?name=${name}`
-      : `http://localhost:3001/tours?id=${id}`;
+      ? `http://localhost:3001/api/continents?name=${name}`
+      : `http://localhost:3001/api/tours/${id}`;
   let tourObject;
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,26 +25,14 @@ export default function SelectedDestination() {
         };
 
         const { data } = await doHttpCall(options);
-        console.log(data);
-
-        if (name !== "Destination") {
-          tourObject = data[0].places.find((e) => e.id === id);
-        } else {
-          tourObject = data[0];
-        }
-
-        if (tourObject) {
-          setSelectedDestination(tourObject);
-        } else {
-          setSelectedDestination(null);
-        }
+        setSelectedDestination(data);
       } catch (error) {
         console.log(error);
       }
       setLoading(false);
     }
     getSelectedDestination();
-  }, [name, id]);
+  }, []);
   if (loading) {
     return <Loading />;
   }

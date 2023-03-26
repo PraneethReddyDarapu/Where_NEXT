@@ -228,10 +228,10 @@ main {
   display: block;
   background: lightcyan;
   box-shadow: var(--dark-shadow);
-  position: absolute;
+  /* position: absolute; */
   top: 4.2rem;
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   z-index: 3;
   padding: 1.5rem;
   border-radius: var(--radius);

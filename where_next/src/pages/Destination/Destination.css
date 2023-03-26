@@ -25,3 +25,9 @@
 .slickpage {
   margin-top: 12%;
 }
+
+.carousel__image {
+  height: 20rem !important;
+  width: 100% !important;
+  object-fit: cover;
+}

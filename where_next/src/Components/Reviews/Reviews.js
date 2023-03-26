@@ -4,7 +4,7 @@ import Loading from "../Loading/Loading";
 import { doHttpCall } from "../../util/restapi";
 import "../../Components/Tours/Tours.css";
 
-const reviewsURL = "http://localhost:3001/reviews";
+const reviewsURL = "http://localhost:3001/api/reviews";
 
 function Reviews() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ function Reviews() {
     }
   };
   useEffect(() => {
-    fetchReviewers();
+    // fetchReviewers();
   }, []);
   if (loading) {
     return (
