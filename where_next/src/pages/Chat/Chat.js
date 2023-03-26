@@ -27,7 +27,7 @@ export default function Chat() {
   );
 
   useWebSocket(
-    `${process.env.REACT_APP_WS_URL}/${
+    `${process.env.REACT_APP_WS_URL}/ws/${
       type == "hangout" ? hangout_id : user_id_query
     }`,
     {

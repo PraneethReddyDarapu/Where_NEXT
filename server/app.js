@@ -73,7 +73,7 @@ server.on("upgrade", (request, socket, head) => {
     });
 
     PubSub.subscribe("chat_personal", (msg, data) => {
-      let request_url = request.url.split("/")[1];
+      let request_url = request.url.split("/")[2];
       if (request_url == data.user_id || request_url == data.target_user_id) {
         socket.send(JSON.stringify(data));
       }
