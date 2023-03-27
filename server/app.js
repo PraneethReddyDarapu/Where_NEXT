@@ -45,13 +45,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/auth", indexRouter);
-app.use("/api/tours", auth, toursRouter);
-app.use("/api/continents", auth, continentsRouter);
-app.use("/api/blogs", auth, blogRouter);
+app.use("/api/tours", toursRouter);
+app.use("/api/continents", continentsRouter);
+app.use("/api/blogs", blogRouter);
 app.use("/api/booking", auth, bookingRouter);
 app.use("/api/hangout", auth, hangoutRouter);
 app.use("/api/chat", auth, chatRouter);
-app.use("/api/travel_theme", auth, travelThemeRouter);
+app.use("/api/travel_theme", travelThemeRouter);
 app.use("/api/profile", auth, profileRouter);
 app.use("/api/reviews", auth, reviewRouter);
 

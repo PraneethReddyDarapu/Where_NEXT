@@ -3,6 +3,7 @@ var router = express.Router();
 const mongoClient = require("../lib/db");
 const ObjectId = require("mongodb").ObjectId;
 const multer = require("multer");
+const auth = require("../lib/middleware");
 
 // Multer configuration
 const storage = multer.diskStorage({
@@ -34,7 +35,7 @@ router.get("/:id", async (req, res, next) => {
 });
 
 /* Create blog */
-router.post("/", upload.single("image"), async (req, res, next) => {
+router.post("/", auth, upload.single("image"), async (req, res, next) => {
   const { title, social_url, description, link, continent } = req.body;
   const { id } = req.user;
   const client = await mongoClient();
