@@ -2,6 +2,8 @@ var express = require("express");
 var router = express.Router();
 const mongoClient = require("../lib/db");
 const ObjectId = require("mongodb").ObjectId;
+const auth = require("../lib/middleware");
+
 
 // reviews are for tours
 router.get("/:tour_id", async (req, res, next) => {
@@ -57,7 +59,7 @@ router.get("/:tour_id", async (req, res, next) => {
 });
 
 // Create review
-router.post("/", async (req, res, next) => {
+router.post("/", auth, async (req, res, next) => {
   const { tour_id, rating, message } = req.body;
   const client = await mongoClient();
   const collection = client.collection("reviews");
