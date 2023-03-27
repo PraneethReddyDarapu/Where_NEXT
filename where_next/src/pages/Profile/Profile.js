@@ -8,6 +8,9 @@ export default function Profile() {
   const { register, handleSubmit, errors, setValue } = useForm();
 
   const [data, setData] = useState({});
+  const [message, setMessage] = useState({
+    success: null,
+  });
 
   const getData = () => {
     axios
@@ -32,7 +35,11 @@ export default function Profile() {
         email: data.email,
       })
       .then((res) => {
-        console.log(res);
+        setMessage({ success: 1, message: "User updated successfully" });
+      })
+      .catch((err) => {
+        console.log(err);
+        setMessage({ success: 0, message: "Something went wrong" });
       });
   };
 
@@ -43,6 +50,11 @@ export default function Profile() {
   return (
     <div className="p-4">
       <h3>Profile</h3>
+      {message?.success === 1 ? (
+        <div className="alert alert-success">{message.message}</div>
+      ) : message?.success === 0 ? (
+        <div className="alert alert-danger">{message.message}</div>
+      ) : null}
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* first_name */}
         <label className="mt-2" htmlFor="first_name">
