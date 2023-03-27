@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./Components/Navbar/Navbar";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Destination from "./pages/Destination/Destination";
 import TravelTheme from "./pages/TravelTheme/TravelTheme";
