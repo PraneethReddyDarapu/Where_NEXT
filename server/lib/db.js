@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 
 async function connect() {
   try {
-    const client = new MongoClient("mongodb://localhost:27017", {
+    const client = new MongoClient(process.env.MONGO_URL, {
       useUnifiedTopology: true,
     });
     await client.connect();
