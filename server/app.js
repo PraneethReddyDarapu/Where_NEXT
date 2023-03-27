@@ -27,6 +27,7 @@ var hangoutRouter = require("./routes/hangout");
 var chatRouter = require("./routes/chat");
 var travelThemeRouter = require("./routes/travel_theme");
 var profileRouter = require("./routes/profile");
+var reviewRouter = require("./routes/review");
 
 // cors allow all
 app.use(cors());
@@ -52,6 +53,7 @@ app.use("/api/hangout", auth, hangoutRouter);
 app.use("/api/chat", auth, chatRouter);
 app.use("/api/travel_theme", auth, travelThemeRouter);
 app.use("/api/profile", auth, profileRouter);
+app.use("/api/reviews", auth, reviewRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -73,7 +75,7 @@ server.on("upgrade", (request, socket, head) => {
     });
 
     PubSub.subscribe("chat_personal", (msg, data) => {
-      let request_url = request.url.split("/")[2];
+      let request_url = request.url.split("/")[1];
       if (request_url == data.user_id || request_url == data.target_user_id) {
         socket.send(JSON.stringify(data));
       }
