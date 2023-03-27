@@ -35,7 +35,7 @@ router.get("/:id", async (req, res, next) => {
 
 /* Create blog */
 router.post("/", upload.single("image"), async (req, res, next) => {
-  const { title, social_url, description, link } = req.body;
+  const { title, social_url, description, link, continent } = req.body;
   const { id } = req.user;
   const client = await mongoClient();
   const collection = client.collection("blogs");
@@ -45,6 +45,7 @@ router.post("/", upload.single("image"), async (req, res, next) => {
     description,
     link,
     title,
+    continent,
     user_id: new ObjectId(id),
   });
   return res.json({
