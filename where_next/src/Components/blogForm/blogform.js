@@ -96,7 +96,7 @@ function FormBlog() {
             <div className="card shadow-sm mt-3 me-3">
               <div className="card-img">
                 <img
-                  src={"http://localhost:3001/images/" + blog.image}
+                  src={"/images/" + blog.image}
                   className="blog__image"
                   alt="blog"
                 />
