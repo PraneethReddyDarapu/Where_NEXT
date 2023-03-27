@@ -15,6 +15,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Logout from "./pages/Logout/Logout";
 import Chat from "./pages/Chat/Chat";
+// import
 
 import Mountains from "./Components/Carousel/Themes/Mountains";
 import HillStations from "./Components/Carousel/Themes/HillStations";
@@ -60,7 +61,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Destination />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/signup" exact element={<Signup />} />
         <Route path="/logout" exact element={<Logout />} />

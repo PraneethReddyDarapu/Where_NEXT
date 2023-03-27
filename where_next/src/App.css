@@ -56,3 +56,13 @@
   font-weight: 600;
   margin-left: 1rem;
 }
+
+.home__banner {
+  background: url("../public/Images/banner.jpg") no-repeat center center/cover;
+  background-color: #79797947;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 92vh;
+}
