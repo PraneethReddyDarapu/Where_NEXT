@@ -50,12 +50,13 @@ function Navbar() {
   return (
     <Card>
       <nav className="navbar navbar-expand-lg navbar-mainbg">
-        <NavLink className="navbar-brand navbar-logo" to="/" exact>
-          <div class="Font">
-            {" "}
-            <b> Where Next</b>{" "}
-          </div>
-        </NavLink>
+        <a
+          href="/"
+          class="Font text-decoration-none text-white ms-3 h5 my-auto"
+        >
+          {" "}
+          <b> Where Next</b>{" "}
+        </a>
         <button
           className="navbar-toggler"
           onClick={function () {
@@ -81,7 +82,7 @@ function Navbar() {
             </div>
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" exact>
+              <NavLink className="nav-link" to="/destination" exact>
                 <i className="far fa-address-book"></i> Destination
               </NavLink>
             </li>
