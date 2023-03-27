@@ -11,8 +11,8 @@ export default function SelectedDestination() {
 
   const navigateUrl =
     name !== "Destination"
-      ? `${process.env.REACT_APP_API_URL}/continents?name=${name}`
-      : `${process.env.REACT_APP_API_URL}/tours/${id}`;
+      ? `http://localhost:3001/api/continents?name=${name}`
+      : `http://localhost:3001/api/tours/${id}`;
   let tourObject;
   React.useEffect(() => {
     window.scrollTo(0, 0);
