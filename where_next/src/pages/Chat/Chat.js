@@ -43,7 +43,7 @@ export default function Chat() {
   const user_id = localStorage.getItem("user_id");
 
   const onSubmit = (data) => {
-    let identifier = type == "hangout" ? hangout_id : user_id_query;
+    let identifier = type == "group" ? hangout_id : user_id_query;
     axios
       .post(`${process.env.REACT_APP_API_URL}/chat/${identifier}`, {
         message: data.message,
