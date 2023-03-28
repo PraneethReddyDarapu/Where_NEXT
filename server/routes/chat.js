@@ -19,21 +19,15 @@ router.get("/:hangout_id", async (req, res, next) => {
         $or: [
           {
             user_id: new ObjectId(user_id),
-            type: "personal",
-          },
-          {
-            target_user_id: new ObjectId(user_id),
+            target_user_id: new ObjectId(req.user.id),
             type: "personal",
           },
           {
             user_id: new ObjectId(req.user.id),
+            target_user_id: new ObjectId(user_id),
             type: "personal",
           },
-          {
-            target_user_id: new ObjectId(req.user.id),
-            type: "personal",
-          },
-        ],
+        ]
       };
     } else {
       match = {
