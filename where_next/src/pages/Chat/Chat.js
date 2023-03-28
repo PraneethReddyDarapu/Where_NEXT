@@ -59,7 +59,7 @@ export default function Chat() {
     let user_id = localStorage.getItem("user_id");
     axios
       .get(
-        `${process.env.REACT_APP_API_URL}/chat/${hangout_id}?user_id=${user_id}&type=${type}`
+        `${process.env.REACT_APP_API_URL}/chat/${hangout_id}?user_id=${user_id_query}&type=${type}`
       )
       .then((res) => {
         setData(res.data);
