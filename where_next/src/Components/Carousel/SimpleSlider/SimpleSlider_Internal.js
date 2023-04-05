@@ -11,7 +11,7 @@ const SimpleSliderInternal = (props) => {
   return (
     <div className="row m-0">
       {props.data?.map((card) => (
-        <div className="col-lg-4 col-md-6" key={card.id}>
+        <div className="col-lg-4 col-md-6 mt-3" key={card.id}>
           <CardItem
             title={card.name}
             description={card.info}
