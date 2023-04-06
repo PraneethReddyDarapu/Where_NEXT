@@ -22,7 +22,31 @@ router.get("/", async (req, res, next) => {
   }
   const collection = client.collection("tours");
   const tours = await collection.find(where).toArray();
-  return res.json(tours);
+  // get rows from not_interested collection
+  let not_interested = [];
+  if (req.user) {
+    const collection = client.collection("not_interested");
+    not_interested = await collection
+      .find({ user_id: new ObjectId(req.user.id) })
+      .toArray();
+  }
+  // console.log({a: not_interested})
+  // if user is logged in then remove tours which are in not_interested collection
+  let result = [];
+  if (not_interested.length > 0) {
+    const not_interested_tour_ids = not_interested.map((item) => {
+      return item.tour_id.toString();
+    });
+    // console.log(not_interested_tour_ids)
+    result = tours.filter((tour, index) => {
+      console.log(not_interested_tour_ids.includes(tour._id.toString()))
+      if (!not_interested_tour_ids.includes(tour._id.toString())) {
+        return tour;
+      }
+    });
+  }
+  // console.log(result)
+  return res.json(result);
 });
 
 /* Get tour by Id */

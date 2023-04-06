@@ -10,6 +10,10 @@ const auth = (req, res, next) => {
     req.user = decoded;
     next();
   } catch (error) {
+    // if tours url skip auth
+    if (req.url === "/tours") {
+      return next();
+    }
     console.log(error);
     return res.status(401).json({ message: "Unauthorized" });
   }

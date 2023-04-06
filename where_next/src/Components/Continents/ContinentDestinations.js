@@ -46,9 +46,9 @@ export const ContinentDestinations = ({
               {readMore ? "show less" : "  read more"}
             </button>
           </p>
-          <Link to={`/tripsearch?id=${_id}`} className="btn btn-dark btn-lg">
+          {!isContinent && <Link to={`/tripsearch?id=${_id}`} className="btn btn-dark btn-lg"> 
             Book now
-          </Link>
+          </Link>}
         </footer>
       </article>
 

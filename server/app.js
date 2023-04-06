@@ -28,6 +28,8 @@ var chatRouter = require("./routes/chat");
 var travelThemeRouter = require("./routes/travel_theme");
 var profileRouter = require("./routes/profile");
 var reviewRouter = require("./routes/review");
+var notInterestedRouter = require("./routes/not_interested");
+
 
 // cors allow all
 app.use(cors());
@@ -45,7 +47,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/auth", indexRouter);
-app.use("/api/tours", toursRouter);
+app.use("/api/tours", auth, toursRouter);
 app.use("/api/continents", continentsRouter);
 app.use("/api/blogs", blogRouter);
 app.use("/api/booking", auth, bookingRouter);
@@ -54,6 +56,8 @@ app.use("/api/chat", auth, chatRouter);
 app.use("/api/travel_theme", travelThemeRouter);
 app.use("/api/profile", auth, profileRouter);
 app.use("/api/reviews", auth, reviewRouter);
+app.use("/api/not_interested", auth, notInterestedRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
