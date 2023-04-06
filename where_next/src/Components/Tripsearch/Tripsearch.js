@@ -85,7 +85,7 @@ function TripSearch() {
                   <span className="text-danger">This field is required</span>
                 )}
               </div>
-              <div className="mt-3">
+              {/* <div className="mt-3">
                 <label>Destination</label>
                 <input
                   type="text"
@@ -96,7 +96,7 @@ function TripSearch() {
                 {errors?.destination && (
                   <span className="text-danger">This field is required</span>
                 )}
-              </div>
+              </div> */}
 
               <div className="mt-3">
                 <label>Start Date</label>

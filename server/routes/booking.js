@@ -24,7 +24,6 @@ router.get("/:id", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   const {
     origin,
-    destination,
     start_date,
     end_date,
     trip_type,
@@ -35,7 +34,6 @@ router.post("/", async (req, res, next) => {
   const collection = client.collection("bookings");
   const booking = await collection.insertOne({
     origin,
-    destination,
     user_id: new ObjectId(req.user.id),
     start_date,
     end_date,
