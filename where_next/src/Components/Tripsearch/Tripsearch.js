@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
+
 import "./Tripsearch.css";
+
 
 function TripSearch() {
   // get id from url params
@@ -13,6 +15,7 @@ function TripSearch() {
   const [showPaymentDetails, setShowPaymentDetails] = useState(false);
   const [showHangoutDetails, setShowHangoutDetails] = useState(true);
   const [mode, setMode] = useState("bus");
+  const [isSuccess, setIsSuccess] = useState(false)
   const paymentRef = useRef(null);
 
   const {
@@ -56,7 +59,11 @@ function TripSearch() {
       })
       .then((res) => {
         console.log(res);
+        setIsSuccess(true);
+        setTimeout(() => {
+          
         window.location.href = "/hangout";
+        }, 3000)
       });
   };
 
@@ -73,6 +80,11 @@ function TripSearch() {
         <div className="col-lg-6 col-md-8">
           {/* Booking section */}
           <div>
+            {isSuccess &&
+            <div class="alert alert-success" role="alert">
+            Tour booked successfully
+          </div>
+            }
             <h2 className="fw-light">Book Your Trip With Us <i class="bi bi-bus-front"></i></h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mt-3">
