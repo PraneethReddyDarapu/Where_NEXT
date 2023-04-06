@@ -12,6 +12,7 @@ function TripSearch() {
   const [bookingDetails, setBookingDetails] = useState({});
   const [showPaymentDetails, setShowPaymentDetails] = useState(false);
   const [showHangoutDetails, setShowHangoutDetails] = useState(true);
+  const [mode, setMode] = useState("bus");
   const paymentRef = useRef(null);
 
   const {
@@ -50,6 +51,7 @@ function TripSearch() {
       .post(`${process.env.REACT_APP_API_URL}/booking/`, {
         ...bookingDetails,
         tour_id: id,
+        mode,
         payment_details: data,
       })
       .then((res) => {
@@ -71,7 +73,7 @@ function TripSearch() {
         <div className="col-lg-6 col-md-8">
           {/* Booking section */}
           <div>
-            <h2 className="fw-light">Book Your Trip With Us</h2>
+            <h2 className="fw-light">Book Your Trip With Us <i class="bi bi-bus-front"></i></h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mt-3">
                 <label>Origin</label>
@@ -153,6 +155,29 @@ function TripSearch() {
                       })}
                     />
                     <span>One Way</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Travel Mode */}
+              <div className="mt-3 container-fluid">
+                <span className="d-flex">Mode of Transport</span>
+                <div
+                  className="row gx-5"
+                >
+                  <div onClick={() => setMode("bus")} className={`col shadow-sm bg-${mode=== "bus"? "dark text-white": "white"} rounded rounded-2 text-center m-2 p-2`}>
+                  <h3 class="bi bi-bus-front"></h3>
+                  <p className="mb-0 pb-0">Bus</p>
+                  </div>
+                  <div onClick={() => setMode("train")} className={`col shadow-sm bg-${mode=== "train"? "dark text-white": "white"} rounded rounded-2 text-center m-2 p-2`}>
+                  <h3 class="bi bi-train-freight-front"></h3>
+                  <p className="mb-0 pb-0">Train</p>
+
+                  </div>
+                  <div onClick={() => setMode("flight")} className={`col shadow-sm bg-${mode=== "flight"? "dark text-white": "white"} rounded rounded-2 text-center m-2 p-2`}>
+                  <h3 class="bi bi-airplane"></h3>
+                  <p className="mb-0 pb-0">Flight</p>
+
                   </div>
                 </div>
               </div>
