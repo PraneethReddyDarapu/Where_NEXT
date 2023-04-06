@@ -44,6 +44,8 @@ router.get("/", async (req, res, next) => {
         return tour;
       }
     });
+  } else {
+    result = tours
   }
   // console.log(result)
   return res.json(result);
