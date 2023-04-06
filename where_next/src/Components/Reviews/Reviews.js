@@ -27,6 +27,17 @@ function Reviews(props) {
       });
   };
 
+  const DeleteReview = (id) => {
+    axios
+      .delete(`${process.env.REACT_APP_API_URL}/reviews/${id}`)
+      .then((res) => {
+        getData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const onSubmit = (data) => {
     axios
       .post(`${process.env.REACT_APP_API_URL}/reviews`, {
@@ -143,6 +154,13 @@ function Reviews(props) {
                     <p className="text-dark user__name fw-normal m-0">
                       {row.message}
                     </p>
+                    <div className="d-flex justify-content-end">
+                      <button className="btn btn-danger"
+                        onClick={() => {
+                          DeleteReview(row._id)
+                        }}
+                      >Delete</button>
+                    </div>
                   </div>
                 </div>
               </div>

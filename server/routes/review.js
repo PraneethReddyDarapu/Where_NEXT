@@ -75,4 +75,12 @@ router.post("/", auth, async (req, res, next) => {
   return res.json(review);
 });
 
+router.delete("/:id", async (req, res, next) => {
+  const { id } = req.params;
+  const client = await mongoClient();
+  const collection = client.collection("reviews");
+  const result = await collection.deleteOne({ _id: new ObjectId(id), user_id: new ObjectId(req.user.id) });
+  return res.json(result);
+});
+
 module.exports = router;
