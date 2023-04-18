@@ -65,7 +65,7 @@ app.use(function (req, res, next) {
 });
 
 const server = app.listen(3001, () => {
-  console.log("Server is running on port 3001");
+  console.log("Server is running on http://localhost:3001");
 });
 server.on("upgrade", (request, socket, head) => {
   wsServer.handleUpgrade(request, socket, head, (socket) => {

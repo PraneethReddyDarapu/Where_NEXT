@@ -112,9 +112,11 @@ export default function Chat() {
                       {row.message}
                       <div className="row justify-content-between">
                         <div className="col-6">
-                          <small className="text-muted">
+                          <a
+                            href={`/chat?user_id=${row?.user[0]?._id}&type=personal`}
+                          className="text-muted">
                             {row?.user[0]?.first_name} {row?.user[0]?.last_name}
-                          </small>
+                          </a>
                         </div>
                         <div className="col-6">
                           <small className="text-muted">

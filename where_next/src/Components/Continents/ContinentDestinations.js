@@ -10,6 +10,9 @@ export const ContinentDestinations = ({
   info,
   name,
   places = [],
+  price,
+  weather,
+  timings,
   isContinent,
 }) => {
   const [readMore, setReadMore] = useState(false);
@@ -46,9 +49,25 @@ export const ContinentDestinations = ({
               {readMore ? "show less" : "  read more"}
             </button>
           </p>
-          {!isContinent && <Link to={`/tripsearch?id=${_id}`} className="btn btn-dark btn-lg"> 
+          <p className="mb-0">
+            Price: ${price}{" "}
+          </p>
+          <p className="mb-0">
+            <b>Weather:</b> {weather}
+          </p>
+          <p className="mb-0">
+            <b>Timings:</b>
+            {timings}
+          </p>
+          <br />
+          {!isContinent && <div>
+            <Link to={`/tripsearch?id=${_id}`} className="btn btn-dark btn-lg"> 
             Book now
-          </Link>}
+          </Link>
+          <Link to={`/hangout`} className="btn btn-dark btn-lg ms-2"> 
+            Hangout
+          </Link>
+          </div>}
         </footer>
       </article>
 

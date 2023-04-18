@@ -7,6 +7,7 @@ function HangoutTogether() {
   const [chats, setChats] = useState([]);
   const [user_id, setUser_id] = useState(localStorage.getItem("user_id"));
   const [activeTab, setActiveTab] = useState(1);
+  const [search, setSearch] = useState("");
 
   const getData = () => {
     setUser_id(localStorage.getItem("user_id"));
@@ -55,50 +56,68 @@ function HangoutTogether() {
         </div>
       </div>
       <div className="blogout">
+        {/* search bar */}
+        <input
+          type="text"
+          className="form-control mt-3"
+          placeholder="Find a hangout"
+          onChange={(e) => setSearch(e.target.value)}
+        />
         {/* hangouts */}
         {activeTab === 1 &&
-          data.map((row, key) => (
-            <div className="card mt-3 shadow-sm border-0" key={key}>
-              <div class="card-body">
-                <div className="col-2 p-0 m-0">
-                  <div className="d-flex align-items-center m-0 p-0">
-                    <img
-                      src={`https://avatars.dicebear.com/4.5/api/avataaars/${row.user._id}.svg?mood=happy`}
-                      alt="avatar"
-                      className="user__image rounded-circle"
-                    />
-                    <p className="text-dark user__name">
-                      {row.user.first_name} {row.user.last_name}
-                    </p>
+          data
+            .filter((row) => {
+              if (search == "") {
+                return row;
+              } else if (
+                row.title.toLowerCase().includes(search.toLowerCase()) ||
+                row.description.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return row;
+              }
+            })
+            .map((row, key) => (
+              <div className="card mt-3 shadow-sm border-0" key={key}>
+                <div class="card-body">
+                  <div className="col-2 p-0 m-0">
+                    <div className="d-flex align-items-center m-0 p-0">
+                      <img
+                        src={`https://avatars.dicebear.com/4.5/api/avataaars/${row.user._id}.svg?mood=happy`}
+                        alt="avatar"
+                        className="user__image rounded-circle"
+                      />
+                      <p className="text-dark user__name">
+                        {row.user.first_name} {row.user.last_name}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-10">
-                    <h5>{row.title}</h5>
-                    <p class="card-text">{row.description}</p>
-                    <p class="card-text">
-                      Date of travel : {row?.booking?.start_date || "-"}{" "}
-                    </p>
+                  <div className="row">
+                    <div className="col-10">
+                      <h5>{row.title}</h5>
+                      <p class="card-text">{row.description}</p>
+                      <p class="card-text">
+                        Date of travel : {row?.booking?.start_date || "-"}{" "}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <br></br>
-                <a
-                  href={`/chat?hangout_id=${row._id}&type=group`}
-                  class="btn btn-dark text-decoration-none"
-                >
-                  Join group chat
-                </a>
-                {row.user_id != user_id && (
+                  <br></br>
                   <a
-                    href={`/chat?hangout_id=${row._id}&user_id=${row.user._id}&type=personal`}
-                    class="btn btn-primary ms-3 text-decoration-none"
+                    href={`/chat?hangout_id=${row._id}&type=group`}
+                    class="btn btn-dark text-decoration-none"
                   >
-                    chat personally
+                    Join group chat
                   </a>
-                )}
+                  {row.user_id != user_id && (
+                    <a
+                      href={`/chat?hangout_id=${row._id}&user_id=${row.user._id}&type=personal`}
+                      class="btn btn-primary ms-3 text-decoration-none"
+                    >
+                      chat personally
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         {/* chat */}
         {activeTab === 2 &&
           chats.map((row, key) => (
