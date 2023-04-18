@@ -49,24 +49,27 @@ export const ContinentDestinations = ({
               {readMore ? "show less" : "  read more"}
             </button>
           </p>
-          <p className="mb-0">
-            Price: ${price}{" "}
-          </p>
-          <p className="mb-0">
-            <b>Weather:</b> {weather}
-          </p>
-          <p className="mb-0">
-            <b>Timings:</b>
-            {timings}
-          </p>
+          {!isContinent &&
+            <div>
+              <p className="mb-0">
+                Price: ${price}{" "}
+              </p>
+              <p className="mb-0">
+                <b>Weather:</b> {weather}
+              </p>
+              <p className="mb-0">
+                <b>Timings:</b>
+                {timings}
+              </p>
+            </div>}
           <br />
           {!isContinent && <div>
-            <Link to={`/tripsearch?id=${_id}`} className="btn btn-dark btn-lg"> 
-            Book now
-          </Link>
-          <Link to={`/hangout`} className="btn btn-dark btn-lg ms-2"> 
-            Hangout
-          </Link>
+            <Link to={`/tripsearch?id=${_id}`} className="btn btn-dark btn-lg">
+              Book now
+            </Link>
+            <Link to={`/hangout`} className="btn btn-dark btn-lg ms-2">
+              Hangout
+            </Link>
           </div>}
         </footer>
       </article>
