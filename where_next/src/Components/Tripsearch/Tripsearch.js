@@ -86,7 +86,7 @@ function TripSearch() {
               Book Your Trip With Us <i class="bi bi-bus-front"></i>
             </h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mt-3">
+              {/* <div className="mt-3">
                 <label>Origin</label>
                 <input
                   type="text"
@@ -97,7 +97,7 @@ function TripSearch() {
                 {errors?.origin && (
                   <span className="text-danger">This field is required</span>
                 )}
-              </div>
+              </div> */}
               {/* <div className="mt-3">
                 <label>Destination</label>
                 <input
