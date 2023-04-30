@@ -1,6 +1,6 @@
 import Accordion from 'react-bootstrap/Accordion';
 
-function Contact() {
+function AboutUs() {
   return (
     <Accordion flush>
       <Accordion.Item eventKey="0">
@@ -72,4 +72,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default AboutUs;

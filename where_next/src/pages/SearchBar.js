@@ -34,7 +34,7 @@ export default function SearchBar() {
     var updatedList = [...itemList];
     // Include all elements which includes the search query
     updatedList = updatedList.filter((item) => {
-      return (item.continent.toLowerCase().indexOf(query.toLowerCase()) !==-1); 
+      return (item.continent.toLowerCase().indexOf(query.toLowerCase()) !== -1); 
     });
     // Trigger render with updated values
     setFilteredList(updatedList);
