@@ -24,7 +24,7 @@ const Travel_Theme = () => {
       <div className="row">
         {data?.map((item, key) => (
           <div className="col-lg-4 col-md-6 mt-3" key={key}>
-            <Card bg="black" text="white">
+            <Card className="single-tour" text="white">
               <Link to={`/travel/${item._id}`}>
                 <Card.Img variant="top" src={item.image} />
               </Link>
