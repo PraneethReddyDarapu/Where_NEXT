@@ -52,7 +52,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-mainbg">
         <a
           href="/"
-          class="Font text-decoration-none text-white ms-3 h5 my-auto"
+          class="Font text-decoration-none ms-3 h5 my-auto headerMain"
         >
           {" "}
           <b> Where Next</b>{" "}
@@ -75,7 +75,7 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-5">
+          <ul className="navbar-nav ml-5 navmainRight">
             <div className="hori-selector">
               <div className="left"></div>
               <div className="right"></div>
@@ -113,14 +113,14 @@ function Navbar() {
                 <BsSearch /> <i className="far fa-chart-bar"></i>Search
               </NavLink>
             </li>
-            <ul>
+            <ul className="navRight">
               {!isLoggedIn && (
                 <li>
                   <NavLink
                     className="nav-link"
                     to="/login"
                     exact
-                    style={{ color: "green" }}
+                    
                   >
                     <i className="far fa-chart-bar"></i> Login
                   </NavLink>
@@ -132,7 +132,7 @@ function Navbar() {
                     className="nav-link"
                     to="/signup"
                     exact
-                    style={{ color: "green" }}
+                  
                   >
                     <i className="far fa-chart-bar"></i> Signup
                   </NavLink>
