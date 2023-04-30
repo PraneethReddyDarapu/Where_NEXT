@@ -154,3 +154,17 @@ i {
   }
 
 }
+.navmainRight{
+  width: 100% !important;
+}
+
+.navRight {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+.headerMain{
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
