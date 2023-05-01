@@ -1,158 +1,152 @@
 import { useState, useEffect } from "react";
 import "./blogForm.css";
-import { db } from "../../firebase";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-} from "firebase/firestore";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  listAll,
-  list,
-} from "firebase/storage";
-import { storage } from "./../../../src/firebase";
-import { v4 } from "uuid";
-import { stringLength } from "@firebase/util";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function FormBlog() {
-  const [newName, setNewName] = useState("");
-  const [newDesc, setNewDesc] = useState("");
+  const [blogs, setBlogs] = useState([]);
+  const [activeContent, setActiveContent] = useState();
 
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    const formData = new FormData();
+    formData.append("image", data.image[0]);
+    formData.append("title", data.title);
+    formData.append("description", data.description);
+    formData.append("link", data.link);
+    formData.append("continent", data.continent);
 
-  const imagesListRef = ref(storage, "images/");
-
-  const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, "users");
-
-  const uploadFile = () => {
-    if (imageUpload == null) return;
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageUrls((prev) => [...prev, url]);
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/blogs`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        getData();
+        reset();
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    });
   };
 
-  const createUser = async () => {
-    await addDoc(usersCollectionRef, {
-      name: newName,
-      desc: newDesc,
-      image: imageUrls[imageUrls.length - 1],
-    });
-  };
-
-  const deleteUser = async (id) => {
-    const userDoc = doc(db, "users", id);
-    await deleteDoc(userDoc);
+  const getData = () => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/blogs`)
+      .then((res) => {
+        setBlogs(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
-    listAll(imagesListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
-        });
-      });
-    });
-
-    const getUsers = async () => {
-      const data = await getDocs(usersCollectionRef);
-      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-
-    getUsers();
+    getData();
   }, []);
 
   return (
-    <div className="Blog">
-      <div className="blogwrapper">
-        <h2>You can post your travel blog here ...</h2>
-        <span>
-          <input
-            type="file"
-            className="btn btn-light"
-            onChange={(event) => {
-              setImageUpload(event.target.files[0]);
-            }}
-          />
-          <button className="btn btn-dark" onClick={uploadFile}>
-            Upload Image
-          </button>
-        </span>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Provide your Social media url to promote here
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="social_url"
-            onChange={(event) => {
-              setNewName(event.target.value);
-            }}
-          />
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">
-            Description
-          </label>
-          <textarea
-            className="form-control"
-            id="exampleFormControlTextarea1"
-            rows="10"
-            placeholder="description..."
-            onChange={(event) => {
-              setNewDesc(event.target.value);
-            }}
-          ></textarea>
-        </div>
-        <button className="btn btn-dark" onClick={createUser}>
-          {" "}
-          Create Blog
+    <div className="Blog mt-3">
+      <h3>Blog</h3>
+      <p>Share your experience with us</p>
+      {/* form */}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {/* file */}
+        <label className="mt-2">Upload Image</label>
+        <input class="form-control" type="file" {...register("image")} />
+        {/* title */}
+        <label className="mt-3">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Title"
+          {...register("title")}
+        />
+        {/* description */}
+        <label className="mt-2">Description</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Description"
+          {...register("description")}
+        />
+        {/* continent */}
+        <label className="mt-2">Continent</label>
+        <select class="form-select" {...register("continent")}>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Africa">Africa</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Australia">Australia</option>
+          <option value="Antarctica">Antarctica</option>
+        </select>
+        {/* link */}
+        <label className="mt-2">Link</label>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Link"
+          {...register("link")}
+        />
+        {/* submit */}
+        <button className="btn btn-dark mt-2" type="submit">
+          Submit
         </button>
-      </div>
+      </form>
+      {/* blogs */}
 
-      <span className="blogoutput">
-        {users.map((user) => {
-          return (
-            <div className="blogout">
-              <div className="card">
-                <img
-                  class="card-img-top"
-                  src={user.image}
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <a href={user.name} class="btn btn-primary" className="card-title" >{user.name}</a>
-                  <p class="card-text">Description : {user.desc}</p>
-                  <a href={user.name} class="btn btn-primary">
-                    Take me there
-                  </a>
+      <div className="d-flex justify-content-end mt-3">
+        <div className="col-4">
+          <select
+            class="form-select"
+            onChange={(e) => setActiveContent(e.target.value)}
+          >
+            <option value="all">All</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Australia">Australia</option>
+            <option value="Antarctica">Antarctica</option>
+          </select>
+        </div>
+      </div>
+      <span className="blogoutput mt-2">
+        {blogs
+          ?.filter((blog) => {
+            if (activeContent === "all") {
+              return blog;
+            } else if (blog.continent === activeContent) {
+              return blog;
+            }
+          })
+          .map((blog) => {
+            return (
+              <div className="card shadow-sm mt-3 me-3">
+                <div className="card-img">
+                  <img
+                    src={"/images/" + blog.image}
+                    className="blog__image"
+                    alt="blog"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4>{blog.title}</h4>
+                  <p>{blog.description}</p>
+                  <a href={blog.link}>Link</a>
                 </div>
               </div>
-              {/* <button
-                className="btn btn-light"
-                onClick={() => {
-                  deleteUser(user.id);
-                }}
-              >
-                {" "}
-                Remove your Blog
-              </button> */}
-            </div>
-          );
-        })}
+            );
+          })}
       </span>
     </div>
   );

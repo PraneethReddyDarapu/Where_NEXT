@@ -3,60 +3,171 @@ import Review from "./Review";
 import Loading from "../Loading/Loading";
 import { doHttpCall } from "../../util/restapi";
 import "../../Components/Tours/Tours.css";
+import axios from "axios";
+import { useForm } from "react-hook-form";
+import moment from "moment";
 
-const reviewsURL = "http://localhost:3001/reviews";
+function Reviews(props) {
+  const [reviews, setReviews] = useState([]);
+  const [stars, setStars] = useState(1);
+  const [message, setMessage] = useState({
+    success: null,
+  });
 
-function Reviews() {
-  const [loading, setLoading] = useState(true);
-  const [reviewers, setReviewers] = useState([]);
+  const { register, handleSubmit, errors, setValue, getValues } = useForm();
 
-  const fetchReviewers = async () => {
-    setLoading(true);
-    try {
-      const options = {
-        method: "GET",
-        url: reviewsURL,
-      };
-
-      const { data } = await doHttpCall(options);
-      const reviewers = data;
-      setLoading(false);
-      setReviewers(reviewers);
-    } catch (error) {
-      setLoading(false);
-      console.log(error);
-    }
+  const getData = () => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/reviews/${props.id}`)
+      .then((res) => {
+        setReviews(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+
+  const DeleteReview = (id) => {
+    axios
+      .delete(`${process.env.REACT_APP_API_URL}/reviews/${id}`)
+      .then((res) => {
+        getData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const onSubmit = (data) => {
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/reviews`, {
+        tour_id: props.id,
+        rating: stars,
+        message: data.message,
+      })
+      .then((res) => {
+        setMessage({
+          status: 1,
+          success: "Review added successfully",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        setMessage({
+          status: 0,
+          success: "Something went wrong",
+        });
+      });
+  };
+
   useEffect(() => {
-    fetchReviewers();
+    getData();
   }, []);
-  if (loading) {
-    return (
-      <main>
-        <Loading />
-      </main>
-    );
-  }
-  if (reviewers.length === 0) {
-    return (
-      <main>
-        <div className="title">
-          <button className="btn-refresh" onClick={() => fetchReviewers()}>
-            refresh
-          </button>
-        </div>
-      </main>
-    );
-  }
 
   return (
     <main>
-      <section className="container-review">
+      <section className="container">
         <div className="title-review">
-          <h2 className="reviews-title">our reviews</h2>
+          <h2 className="reviews-title">Reviews</h2>
           <div className="underline"></div>
         </div>
-        <Review people={reviewers} />
+
+        {message?.status === 1 ? (
+          <div className="alert alert-success">{message.success}</div>
+        ) : message?.status === 0 ? (
+          <div className="alert alert-danger">{message.success}</div>
+        ) : null}
+
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {/* rating with stars background gold on hover and message */}
+
+          <div className="d-flex">
+            {[1, 2, 3, 4, 5].map((star, key) => (
+              <i
+                class="bi bi-star-fill"
+                onClick={() => setStars(star)}
+                style={{
+                  color: star <= stars ? "#f8e825" : "#333",
+                }}
+              ></i>
+            ))}
+          </div>
+          {errors?.rating && (
+            <span className="text-danger">This field is required</span>
+          )}
+
+          {/* message */}
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              className="form-control"
+              placeholder="Message"
+              {...register("message", { required: true })}
+            ></textarea>
+            {errors?.message && (
+              <span className="text-danger">This field is required</span>
+            )}
+          </div>
+
+          <button type="submit" className="btn btn-dark">
+            Submit
+          </button>
+        </form>
+
+        <div className="row mt-3">
+          {reviews.map((row, key) => (
+            <div className="col-12 mt-3">
+              <div className="col-11 row rounded shadow border p-3">
+                <div className="col-5 p-0 m-0">
+                  <div className="d-flex align-items-center m-0 p-0">
+                    <img
+                      src={`https://avatars.dicebear.com/4.5/api/avataaars/${row.user._id}.svg?mood=happy`}
+                      alt="avatar"
+                      className="user__image rounded-circle"
+                    />
+                    <p className="text-dark user__name fw-normal m-0">
+                      {row.user.first_name} {row.user.last_name}
+                    </p>
+                  </div>
+                </div>
+                <div className="col-7 text-end">
+                  <p className="text-dark user__name fw-normal m-0">
+                    {/* format: relative time like 2 days ago */}
+                    {moment(row.createdAt).fromNow()}
+                  </p>
+                </div>
+
+                <div className="col-12">
+                  {/* stars with message */}
+                  <div className="">
+                    {[1, 2, 3, 4, 5].map((star, key) => (
+                      <i
+                        class="bi bi-star-fill"
+                        style={{
+                          color: star <= row.rating ? "#f8e825" : "#333",
+                        }}
+                      ></i>
+                    ))}
+
+                    <p className="text-dark user__name fw-normal m-0">
+                      {row.message}
+                    </p>
+                    <div className="d-flex justify-content-end">
+                      <button className="btn btn-danger"
+                        onClick={() => {
+                          DeleteReview(row._id)
+                        }}
+                      >Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* <Review people={reviewers} /> */}
       </section>
     </main>
   );
