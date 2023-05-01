@@ -3,17 +3,27 @@ import Loading from "../Loading/Loading";
 import Tours from "./Tours";
 import { doHttpCall } from "../../util/restapi";
 import "../../Components/Tours/Tours.css";
+import axios from "axios";
 
-const toursURL = "http://localhost:3001/tours";
+const toursURL = `${process.env.REACT_APP_API_URL}/tours`;
 
 function TourWrapper() {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
-  const removeTour = (id) => {
-    const newTours = tours.filter((tour) => tour.id !== id);
-    setTours(newTours);
+  const removeTour = async (id) => {
+    await axios
+      .post(`${process.env.REACT_APP_API_URL}/not_interested`, {
+        tour_id: id,
+      })
+      .then((res) => {
+        fetchTours();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+
 
   const fetchTours = async () => {
     setLoading(true);

@@ -228,10 +228,10 @@ main {
   display: block;
   background: lightcyan;
   box-shadow: var(--dark-shadow);
-  position: absolute;
+  /* position: absolute; */
   top: 4.2rem;
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   z-index: 3;
   padding: 1.5rem;
   border-radius: var(--radius);
@@ -286,7 +286,11 @@ main {
   cursor: pointer;
   padding-left: 0.25rem;
 }
-
+.single-tour a {
+  color: #49a6e9;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
 .tour-price {
   color: var(--clr-primary-5);
   background: var(--clr-primary-10);

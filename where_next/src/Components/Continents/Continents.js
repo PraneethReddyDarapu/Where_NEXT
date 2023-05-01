@@ -4,7 +4,7 @@ import { doHttpCall } from "../../util/restapi";
 import { Link } from "react-router-dom";
 import "../../Components/Tours/Tours.css";
 
-const continentsURL = "http://localhost:3001/continents";
+const continentsURL = `${process.env.REACT_APP_API_URL}/continents`;
 
 function Continents() {
   const [loading, setLoading] = useState(true);
@@ -50,26 +50,28 @@ function Continents() {
   }
 
   return (
-    <section className="continentOverlay">
-      <div className="title-continent">
-        <h2 className="tours-title-continent"> Continents</h2>
-        <div className="underline-continent"></div>
-      </div>
-      <div className="continent">
-        {continents.map((continent) => {
-          return (
-            <>
-              <Link
-                to={`/destination/${continent.name}`}
-                className="btn btn-primary btn-details"
-              >
-                {continent.name}{" "}
-              </Link>
-            </>
-          );
-        })}
-      </div>
-    </section>
+    <div className="p-3">
+      <section className="continentOverlay">
+        <div className="title-continent">
+          <h2 className="tours-title-continent"> Continents</h2>
+          <div className="underline-continent"></div>
+        </div>
+        <div className="continent">
+          {continents.map((continent) => {
+            return (
+              <>
+                <Link
+                  to={`/destination/${continent._id}`}
+                  className="btn btn-primary btn-details"
+                >
+                  {continent.name}{" "}
+                </Link>
+              </>
+            );
+          })}
+        </div>
+      </section>
+    </div>
   );
 }
 

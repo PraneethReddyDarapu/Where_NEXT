@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import HangoutTogether from '../../Components/HangoutTogether/hangouttogether';
 const Hangout_Together = () => {
   return (
   <div className="container">
-    
-    <h1 className="text-center" style={{paddingTop: "30%"}}>
-    Hangout_Together
-    </h1>
+    <HangoutTogether></HangoutTogether>
+   
     
   </div>
   )

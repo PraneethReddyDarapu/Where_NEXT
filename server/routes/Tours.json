@@ -1,0 +1,414 @@
+{
+  "tours": [
+    {
+      "id": "1",
+      "name": "Best of Paris in 7 Days Tour",
+      "info": "Paris is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Paris-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Paris in 7 Days!",
+      "image": "https://images2.imgbox.com/d6/91/DLtwCiTn_o.jpg",
+      "price": "1,995"
+    },
+    {
+      "id": "2",
+      "name": "Best of Ireland in 14 Days Tour",
+      "info": "Rick Steves' Best of Ireland tour kicks off with the best of Dublin, followed by Ireland's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Ireland in 14 Days!",
+      "image": "https://images2.imgbox.com/e5/62/SR8sJgyg_o.jpeg",
+      "price": "3,895"
+    },
+    {
+      "id": "3",
+      "name": "Best of Salzburg & Vienna in 8 Days Tour",
+      "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Salzburg & Vienna in 8 Days!",
+      "image": "https://images2.imgbox.com/a2/b3/5H5WRLw7_o.jpeg",
+      "price": "2,695"
+    },
+    {
+      "id": "4",
+      "name": "Best of Rome in 7 Days Tour",
+      "info": "Our Rome tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Rome vacation, your tour guide will resurrect the grandeur of ancient Rome's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Rome, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Rome in 7 Days!",
+      "image": "https://images2.imgbox.com/67/2f/Sk5x6VxF_o.jpeg",
+      "price": "2,095"
+    },
+    {
+      "id": "5",
+      "name": "Best of Poland in 10 Days Tour",
+      "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Poland for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Poland's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Poland's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Poland in 10 Days!",
+      "image": "https://images2.imgbox.com/ff/f5/vFKUUGBY_o.jpeg",
+      "price": "2,595"
+    },
+    {
+      "id": "6",
+      "name": "Best of Rome in 7 Days Tour",
+      "info": "Our Rome tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Rome vacation, your tour guide will resurrect the grandeur of ancient Rome's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Rome, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Rome in 7 Days!",
+      "image": "https://images2.imgbox.com/67/2f/Sk5x6VxF_o.jpeg",
+      "price": "2,095"
+    },
+    {
+      "id": "7",
+      "name": "Best of Poland in 10 Days Tour",
+      "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Poland for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Poland's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Poland's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Poland in 10 Days!",
+      "image": "https://images2.imgbox.com/ff/f5/vFKUUGBY_o.jpeg",
+      "price": "2,595"
+    }
+  ],
+  "continents": [
+    {
+      "name": "Asia",
+      "info": "Asia is the largest continent in size. It has the biggest land area and the world's biggest population. This means most people on our Earth live on the Asian continent.About 4.6 billion people live in Asia. The Asian continent has the most populous cities, which means there are the biggest cities in the world. Many million people live in the urban centres of the Asian continent, in cities such as in Delhi, Tokyo, Shanghai or Beijing.Asia houses some of the richest nations in the world. The tiny country Qatar on the Arabian peninsula is on of the richest nations in the world due to its income from oil exploration and the petroleum industry. Saudi-Arabia, the United Arab Emirates and Bahrain are also among richest countries in the world due to their oil reserves. ",
+      "image": "https://media.cntraveler.com/photos/576aec63558ff1e22af1276b/master/w_2048,h_1536,c_limit/Taktsang-Monastery-GettyImages-486735985.jpg",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of India in 7 Days Tour",
+          "info": "India is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your India-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of India in 7 Days!",
+          "image": "https://media.cntraveler.com/photos/576af69fc06bba921a97a0bc/16:9/w_2580,c_limit/Taj-Mahal-GettyImages-485899645.jpg",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Maldives in 7 Days Tour",
+          "info": "Our Maldives tour serves up Asia's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Maldives vacation, your tour guide will resurrect the grandeur of ancient Maldives's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Maldives, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Maldives in 7 Days!",
+          "image": "https://images.thrillophilia.com/image/upload/s--qg267uPX--/c_fill,g_center,h_642,q_auto,w_1280/f_auto,fl_strip_profile/v1/images/photos/000/082/497/original/1675261154_shutterstock_2148766633.jpg.jpg",
+          "price": "2,095"
+        },
+        {
+          "id": "3",
+          "name": "Best of Singapore in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Singapore for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Singapore's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Singapore's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Poland in 10 Days!",
+          "image": "https://www.thoughtco.com/thmb/C1Nbj1M6jZK9Xm_lgD1ndDPPAk4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/singapore--garden-by-the-bay--supertree-grove-638256268-fa59e7e78b6449aaa40f68eafe6ff1a1.jpg",
+          "price": "2,595"
+        },
+        {
+          "id": "4",
+          "name": "Best of Ireland in 14 Days Tour",
+          "info": "Rick Steves' Best of Ireland tour kicks off with the best of Dublin, followed by Ireland's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Ireland in 14 Days!",
+          "image": "https://rawmalroams.com/wp-content/uploads/2020/08/63F1820F-BC01-4AA8-B3CD-824F2E8E2DA7-1024x570.jpeg",
+          "price": "3,895"
+        },
+        {
+          "id": "5",
+          "name": "Best of Salzburg & Vienna in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Salzburg & Vienna in 8 Days!",
+          "image": "https://www.laurewanders.com/wp-content/uploads/2021/11/Potala-Palace-1024x643.jpg",
+          "price": "2,695"
+        }
+      ]
+    },
+    {
+      "name": "Africa",
+      "info": "Africa is the continent with the most countries. There are 54 countries on the African continent.About 1.3 billion people live in Africa. The largest cities of the African continent are Lagos/Nigeria, Kinshasa/DR Congo and Cairo/Egypt.The oldest human fossils such as skeletons and skulls have been discovered in Africa, therefore the African continent is also referred to as the 'cradle of humankind",
+      "image": "https://africawanderlust.com/wp-content/uploads/2019/12/Lions-Head-Cape-Town-South-Africa.jpg",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of India in 7 Days Tour",
+          "info": "Paris is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Paris-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Paris in 7 Days!",
+          "image": "https://africawanderlust.com/wp-content/uploads/2019/12/House-on-Hill-Madagascar.jpg",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Ireland in 14 Days Tour",
+          "info": "Rick Steves' Best of Ireland tour kicks off with the best of Dublin, followed by Ireland's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Ireland in 14 Days!",
+          "image": "https://africawanderlust.com/wp-content/uploads/2019/12/victoria-falls-waterfall-attraction.jpg",
+          "price": "3,895"
+        },
+        {
+          "id": "3",
+          "name": "Best of Salzburg & Vienna in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Salzburg & Vienna in 8 Days!",
+          "image": "https://africawanderlust.com/wp-content/uploads/2019/12/Amboseli-National-Park-Kenya-Africa.jpg",
+          "price": "2,695"
+        },
+        {
+          "id": "4",
+          "name": "Best of Rome in 7 Days Tour",
+          "info": "Our Rome tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Rome vacation, your tour guide will resurrect the grandeur of ancient Rome's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Rome, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Rome in 7 Days!",
+          "image": "https://africawanderlust.com/wp-content/uploads/2019/12/Giraffe-Maasai-Mara-Kenya.jpg",
+          "price": "2,095"
+        },
+        {
+          "id": "5",
+          "name": "Best of Poland in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Poland for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Poland's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Poland's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Poland in 10 Days!",
+          "image": "https://africawanderlust.com/wp-content/uploads/2019/12/picturesque-view-of-Okavango-Delta-Botswana.jpg",
+          "price": "2,595"
+        }
+      ]
+    },
+    {
+      "name": "Europe",
+      "info": "Europe is considered to be the wealthiest and richest continent, however, there are poor regions especially in the eastern parts of the continent too! Europe houses the two smallest countries in the world:Vatican City which is located inside Rome/Italy, Monaco which is bordered on three sides by France.According to the United Nations, there are 44 countries in Europe. Five European countries are among the ten smallest countries in the world: San Marino, Liechtenstein, Vatican City, Monaco and the island country of Malta. The other five tiny countries of our planet are located on islands outside Europe.  ",
+      "image": "https://blog.globusjourneys.com/wp-content/uploads/2018/07/hallstatt-austria-cr-getty-1-820x560.jpg",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of Paris in 7 Days Tour",
+          "info": "Paris is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Paris-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Paris in 7 Days!",
+          "image": "https://s27363.pcdn.co/wp-content/uploads/2021/01/Beautiful-for-Facebook.jpg.optimal.jpg",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Ireland in 14 Days Tour",
+          "info": "Rick Steves' Best of Ireland tour kicks off with the best of Dublin, followed by Ireland's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Ireland in 14 Days!",
+          "image": "https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-529590615-1380x1035.jpg",
+          "price": "3,895"
+        },
+        {
+          "id": "3",
+          "name": "Best of Salzburg & Vienna in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Salzburg & Vienna in 8 Days!",
+          "image": "https://static.toiimg.com/thumb/msid-87867122,width-1070,height-580,resizemode-75,imgsize-87867122,pt-32,y_pad-40/87867122.jpg",
+          "price": "2,695"
+        },
+        {
+          "id": "4",
+          "name": "Best of Rome in 7 Days Tour",
+          "info": "Our Rome tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Rome vacation, your tour guide will resurrect the grandeur of ancient Rome's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Rome, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Rome in 7 Days!",
+          "image": "https://assets.cntraveller.in/photos/629f30c074e2baa4e2fc00de/master/w_3936,h_2624,c_limit/Plitvice-Lakes-Croatia-GettyImages-1080935866.jpg",
+          "price": "2,095"
+        },
+        {
+          "id": "5",
+          "name": "Best of Poland in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Poland for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Poland's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Poland's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Poland in 10 Days!",
+          "image": "https://images2.imgbox.com/ff/f5/vFKUUGBY_o.jpeg",
+          "price": "2,595"
+        }
+      ]
+    },
+    {
+      "name": "Australia",
+      "info": "Australia/Oceania is the smallest continent of the planet. Strictly speaking Oceania is a geographic region that includes Australasia, Polynesia, Micronesia and Melanesia.This means Australia, New Zealand, Vanuatu and the many islands to the north and east of Australia in the Pacific Ocean are this region and thus on this continent. Australia is the largest landmass in the region and thus often also referred to as a continent.About 43 million people live in Oceania. The most populous cities of the continent are Sydney, Melbourne, Brisbane and Perth - all these cities are in Australia.",
+      "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-sydney-harbour.jpg",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of Sydney in 7 Days Tour",
+          "info": "Sydney is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Sydney-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Sydney in 7 Days!",
+          "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-blue-mountains-national-park.jpg",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Melbourne in 14 Days Tour",
+          "info": "Rick Steves' Best of Melbourne tour kicks off with the best of Dublin, followed by Melbourne's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Melbourne in 14 Days!",
+          "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-great-barrier-reef.jpg",
+          "price": "3,895"
+        },
+        {
+          "id": "3",
+          "name": "Best of Brisbane in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Brisbane, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Brisbane & Vienna in 8 Days!",
+          "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-uluru.jpg",
+          "price": "2,695"
+        },
+        {
+          "id": "4",
+          "name": "Best of Darwin in 7 Days Tour",
+          "info": "Our Darwin tour serves up Australia's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Darwin vacation, your tour guide will resurrect the grandeur of ancient Darwin's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Darwin, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Darwin in 7 Days!",
+          "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-great-ocean-road.jpg",
+          "price": "2,095"
+        },
+        {
+          "id": "5",
+          "name": "Best of Hobart in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Hobart for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Hobart's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Hobart's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Hobart in 10 Days!",
+          "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-kakadu.jpg",
+          "price": "2,595"
+        },
+        {
+          "id": "6",
+          "name": "Best of Canberra in 7 Days Tour",
+          "info": "Our Canberra tour serves up Australia's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Canberra vacation, your tour guide will resurrect the grandeur of ancient Canberra's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Canberra, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Canberra in 7 Days!",
+          "image": "https://www.planetware.com/wpimages/2022/04/australia-in-pictures-beautiful-places-to-photograph-lord-howe-island-new-south-wales.jpg",
+          "price": "2,095"
+        },
+        {
+          "id": "7",
+          "name": "Best of Perth in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Perth for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Perth's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Perth's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Perth in 10 Days!",
+          "image": "https://www.planetware.com/photos-large/AUS/australia-beautiful-places-cape-tribulation.jpg",
+          "price": "2,595"
+        }
+      ]
+    },
+    {
+      "name": "North America",
+      "info": "North America is a continent which is located entirely on the northern and western hemisphere. There are 23 countries in total on the North American continent.North American countries are the United States of America (USA), Canada, Mexico, the Caribbean islands and various other countries.The the world's largest island Greenland is located on the North American continent. Greenland, however, belongs to Denmark, a country in Europe. Greenland is also known for the northernmost place in the world!About 580 million people live on the North American continent. North America is home to the largest Christian population in the world. Almost 80% of the people in Canada, the USA and Mexico consider themselves as Christians. ",
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/f3/4e/caption.jpg?w=600&h=600&s=1",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of Paris in 7 Days Tour",
+          "info": "Paris is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Paris-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Paris in 7 Days!",
+          "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/c1/ff/28/caption.jpg?w=600&h=600&s=1",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Ireland in 14 Days Tour",
+          "info": "Rick Steves' Best of Ireland tour kicks off with the best of Dublin, followed by Ireland's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Ireland in 14 Days!",
+          "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f5/65/mexico.jpg?w=600&h=600&s=1",
+          "price": "3,895"
+        },
+        {
+          "id": "3",
+          "name": "Best of Salzburg & Vienna in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Salzburg & Vienna in 8 Days!",
+          "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/f6/ef/56/cruise-right-into-clear.jpg?w=600&h=600&s=1",
+          "price": "2,695"
+        },
+        {
+          "id": "4",
+          "name": "Best of Rome in 7 Days Tour",
+          "info": "Our Rome tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Rome vacation, your tour guide will resurrect the grandeur of ancient Rome's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Rome, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Rome in 7 Days!",
+          "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/11/13/7f/fontaines-du-bellagio.jpg?w=1000&h=800&s=1",
+          "price": "2,095"
+        },
+        {
+          "id": "5",
+          "name": "Best of Poland in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Poland for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Poland's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Poland's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Poland in 10 Days!",
+          "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/64/68/68/new-york-traumblick-auf.jpg?w=1000&h=800&s=1",
+          "price": "2,595"
+        }
+      ]
+    },
+    {
+      "name": "South America",
+      "info": "South America is a continent of many natural superlatives.the longest mountain range - the Andes, the highest waterfalls - the Angel Falls and the driest place on earth - the Atacama Desert in Chile.About 430 million people live in South America.",
+      "image": "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2021/04/kerkmt-e1618321977695.jpg",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of Cartagena (Colombia) in 7 Days Tour",
+          "info": "Cartagena (Colombia) is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Cartagena (Colombia)-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Cartagena (Colombia) in 7 Days!",
+          "image": "https://www.touropia.com/gfx/b/2016/06/Cartagena.jpg",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Building, Church, Natural Feature in 14 Days Tour",
+          "info": "Rick Steves' Best of Building, Church, Natural Feature tour kicks off with the best of Dublin, followed by Building, Church, Natural Feature's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Building, Church, Natural Feature in 14 Days!",
+          "image": "https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2021/04/f1mwf1.jpg",
+          "price": "3,895"
+        },
+        {
+          "id": "3",
+          "name": "Best of Mindo Valley, Ecuador in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Mindo Valley, Ecuador in 8 Days!",
+          "image": "https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2021/04/2a6313y.jpg",
+          "price": "2,695"
+        },
+        {
+          "id": "4",
+          "name": "Best of Iguazu Falls, Brazil/Argentina in 7 Days Tour",
+          "info": "Our Iguazu Falls, Brazil/Argentina tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Iguazu Falls, Brazil/Argentina vacation, your tour guide will resurrect the grandeur of ancient Iguazu Falls, Brazil/Argentina's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Iguazu Falls, Brazil/Argentina, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Iguazu Falls, Brazil/Argentina in 7 Days!",
+          "image": "https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2021/04/e78mb4.jpg",
+          "price": "2,095"
+        },
+        {
+          "id": "5",
+          "name": "Best of Chile in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Chile for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Chile's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Chile's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Chile in 10 Days!",
+          "image": "https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2021/04/j5tt25.jpg",
+          "price": "2,595"
+        }
+      ]
+    },
+    {
+      "name": "Antarctica",
+      "info": "Antarctica is the smallest continent by population numbers. This means the huge continent is only sparsely populated.On Antarctica there are only research stations for scientists and no permanent settlements. Antarctica is covered almost completely by ice. 90% of the planet's ice is located on this continent, which also makes up 60% - 70% of the world's freshwater supply. ",
+      "image": "https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/33/thumb_32639_default_900.jpeg",
+      "places": [
+        {
+          "id": "1",
+          "name": "Best of Go for a birdwatching cruise in Antarctica’s bird paradise in 7 Days Tour",
+          "info": "Go for a birdwatching cruise in Antarctica’s bird paradise is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Go for a birdwatching cruise in Antarctica’s bird paradise-savvy Rick Steves guide will immerse you in the very best of the City of Light: the masterpiece-packed Louvre and Orsay museums, resilient Notre-Dame Cathedral, exquisite Sainte-Chapelle, and extravagant Palace of Versailles. You'll also enjoy guided neighborhood walks through the city's historic heart as well as quieter moments to slow down and savor the city's intimate cafés, colorful markets, and joie de vivre. Join us for the Best of Go for a birdwatching cruise in Antarctica’s bird paradise in 7 Days!",
+          "image": "https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/16/thumb_15095_default_900.jpeg",
+          "price": "1,995"
+        },
+        {
+          "id": "2",
+          "name": "Best of Kayak around Antarctic sea ice – or scuba dive under it in 14 Days Tour",
+          "info": "Rick Steves' Best of Kayak around Antarctic sea ice – or scuba dive under it tour kicks off with the best of Dublin, followed by Kayak around Antarctic sea ice – or scuba dive under it's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Kayak around Antarctic sea ice – or scuba dive under it in 14 Days!",
+          "image": "https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/12/thumb_11543_default_900.jpeg",
+          "price": "3,895"
+        },
+        {
+          "id": "3",
+          "name": "Best of Salzburg & Vienna in 8 Days Tour",
+          "info": "Let's go where classical music, towering castles, and the-hills-are-alive scenery welcome you to the gemütlichkeit of Bavaria and opulence of Austria's Golden Age. Your Rick Steves guide will bring this region's rich history and culture to life in festive Munich, Baroque Salzburg, sparkling Lake Hallstatt, monastic Melk, the blue Danube, and royal Vienna — with cozy villages and alpine vistas all along the way. Join us for the Best of Munich, Salzburg & Vienna in 8 Days!",
+          "image": "https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/13/thumb_12005_default_900.jpeg",
+          "price": "2,695"
+        },
+        {
+          "id": "4",
+          "name": "Best of Cruise (and helicopter) the spectacular Ross Sea in 7 Days Tour",
+          "info": "Our Cruise (and helicopter) the spectacular Ross Sea tour serves up Europe's most intoxicating brew of dazzling art, earth-shaking history, and city life with style. On this Cruise (and helicopter) the spectacular Ross Sea vacation, your tour guide will resurrect the grandeur of ancient Cruise (and helicopter) the spectacular Ross Sea's Colosseum, Forum, Pantheon, and nearby Ostia Antica. From the Renaissance and Baroque eras, you'll marvel at St. Peter's Basilica, the Vatican Museums, Sistine Chapel, and Borghese Gallery. You'll also enjoy today's Cruise (and helicopter) the spectacular Ross Sea, with neighborhood walking tours, memorable restaurants, and time to explore on your own. Join us for the Best of Cruise (and helicopter) the spectacular Ross Sea in 7 Days!",
+          "image": "https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/29/thumb_28650_default_900.jpeg",
+          "price": "2,095"
+        },
+        {
+          "id": "5",
+          "name": "Best of Or cruise (and helicopter) the wondrous Weddell Sea in 10 Days Tour",
+          "info": "Starting in the colorful port city of Gdańsk, you'll escape the crowds and embrace the understated elegance of ready-for-prime-time Or cruise (and helicopter) the wondrous Weddell Sea for 10 days. With an expert Rick Steves guide at your side, you'll experience mighty Malbork castle, the cobbly-cute village of Toruń, Or cruise (and helicopter) the wondrous Weddell Sea's contemporary capital of Warsaw, the spiritual Jasna Góra Monastery, and charming Kraków — Or cruise (and helicopter) the wondrous Weddell Sea's finest city. In this land of surprises — so trendy and hip, yet steeped in history — there's so much to discover. Join us for the Best of Or cruise (and helicopter) the wondrous Weddell Sea in 10 Days!",
+          "image": "https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/01/thumb_590_default_900.jpeg",
+          "price": "2,595"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Marguerite Reph",
+      "image": "https://xsgames.co/randomusers/assets/avatars/female/22.jpg",
+      "text": "On Monday I returned back home after wonderfull trip. We have seen quite a lot of the things that we wanted to see. My impressions from this trip have changed the ‘view’ I had on (travelling ) in a very positive way.A big thank you to our drivers our guide; they were great! They provided us with the services that we were looking for even though a trip like this was the first one for all of them too. Of course also thanks to CultureRoad and other people involved in making this trip possible."
+    },
+    {
+      "id": 2,
+      "name": "anna johnson",
+      "image": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
+      "text": "I joined the tour in December. Our guide Rik was experienced, friendly and always ready to help. The tour was a unique experience. We saw many cities, museums, archaeological sites and other attractions. We met the friendly people. Thank you very much for everything. I recommend it to everyone 🙂"
+    },
+    {
+        "id": 3,
+        "name": "anna johnson",
+        "image": "https://xsgames.co/randomusers/assets/avatars/male/33.jpg",
+        "text": "In 2018, we took a fantastic trip with a group of friends, organised by CultureRoad.This year (2022) we travelled through Kyrgyzstan, which turned out to be a spectacularly beautiful country, with very friendly people. Again, great organisation, partly due to super good communication with Rik beforehand. We had a fantastic guide and driver and stayed in special and very hospitable homestays and yurts.Travelling through Kyrgyztan with CultureRoad is highly recommended!"
+      },
+    
+    {
+      "id": 4,
+      "name": "bill anderson",
+      "image": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
+      "text": "It really was a very impressive journey! Beyond expectations.Thank you very much for your fantastic organisation! Definitely worth repeating. Next time a new destination!"
+    },
+    {
+      "id": 5,
+      "name": "Monty Zamir",
+      "image": "https://xsgames.co/randomusers/assets/avatars/male/27.jpg",
+      "text": "I was still a rookie when it comes to travelling and then travelling alone to a crazy country is quite exciting. The clarity and helpfulness of CultureRoad has taken most of this away. At the same time, the travel organisation with which they work is of great class. I’ve just returned but I’m already looking for my next trip."
+    },
+    {
+        "id": 6,
+        "name": "peter jones",
+        "image": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
+        "text": "woww great i wish in the future one day i will go there. I like to visit such type of natural place. Here you will get some time to spend with yourself. Natural beauty always inspired me to feel different."
+      },
+    {
+      "id": 7,
+      "name": "Sun Feagin",
+      "image": "https://xsgames.co/randomusers/assets/avatars/female/10.jpg",
+      "text": "The pleasant contact during the preparation, a very fine, reliable and professional guide,a good car with a very experienced driver, good accommodation great program. Due to a landslide, part of our group was unable to return because the road was blocked. Caspar of CultureRoad picked up the contact and helped us well."
+    },
+    {
+      "id": 8,
+      "name": "susan smith",
+      "image": "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+      "text": "Great tour with wonderful memories. Loved it when the head of security said “we’ve been watching you on camera and trying to figure out who you are!”  That’s when you know you’re off the beaten path of many westerners. It was fantastic to be welcomed in and even served tea!"
+    }
+  ]
+}
