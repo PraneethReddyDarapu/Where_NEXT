@@ -108,15 +108,7 @@ function HangoutTogether() {
                 
               </div>
               
-              {/* <button
-                className="btn btn-light"
-                onClick={() => {
-                  deleteUser(user.id);
-                }}
-              >
-                {" "}
-                Remove your Blog
-              </button> */}
+      
             </div>
 
      
